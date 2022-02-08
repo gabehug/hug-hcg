@@ -5,7 +5,7 @@ import styled from "styled-components";
 const ButtonWrapper = styled.div`
     font-family: proxima-nova, sans-serif;
     font-weight: 600;
-    position: absolute;
+    
     height: 3em;
     width: 8em;
     display: flex;

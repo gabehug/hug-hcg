@@ -13,7 +13,7 @@ const Background = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 `;
 
@@ -31,18 +31,22 @@ const TopSectionContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
 `;
 
 const CardTitle = styled.div`
-    width: 25em;
+    width: 12em;
     color: #2D3A54;
     font-size: 1.8em;
-    margin: 4em 0;
+    margin: 4em ;
+    padding: 0.5em;
+
 `;
 
 const CardText = styled.div`
-    width: 25em;
-    font-size: 1.4em;
+    width: 22em;
+    font-size: 1.5em;
+    justify-content: center;
     text-align: left;
     margin: 4em 0;
 `;
@@ -87,7 +91,7 @@ export function Work(props) {
                 <LineContainer />
                 <MidSectionContainer>
                     <CardText>
-                        <p>We provide interim senior level Human Resourceleadership.  Our entire team has expertise in Human Capital Management (HCM), the comprehensive set of an organization’s practicesfor recruiting, managing, developing, and optimizing employees (as an intangible asset) in order to maximize their business value.</p>
+                        <p>We provide interim senior level Human Resource leadership.  Our entire team has expertise in Human Capital Management (HCM), the comprehensive set of an organization’s practicesfor recruiting, managing, developing, and optimizing employees (as an intangible asset) in order to maximize their business value.</p>
                     </CardText>
                     <Marginer direction="horizontal" margin={60} />
                     <CardTitle>

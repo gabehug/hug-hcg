@@ -5,7 +5,7 @@ import welcomeImg from "../../assets/welcomeImg.svg";
 
 const LandingPageContainer = styled.div`
     width: 100%;
-    height: 860px;
+    height: 1000px;
     background-color: #2D3A54;
     background-size: cover;
 `;

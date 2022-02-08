@@ -5,7 +5,7 @@ import { Button } from "../button";
 
 const IntroductionContainer = styled.div`
     width: 100%;
-    height: 860px;
+    height: 1000px;
     background-color: #393C3E;
     background-size: cover;
 `;

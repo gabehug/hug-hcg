@@ -7,6 +7,11 @@ import { Navbar } from "../../components/navbar";
 import { LandingPage } from "../../components/landingPage";
 import { Introduction } from "../../components/introduction";
 import { Work } from "../../components/work";
+import { Scheduling } from "../../components/scheduling";
+import { Quote } from "../../components/quote";
+import { Blog } from "../../components/blog";
+import { Contact } from "../../components/contact";
+import { Footer } from "../../components/footer";
 
 
 const Background = styled.div`
@@ -24,9 +29,15 @@ export function HomePage(props) {
                 <Navbar/>
                 <Marginer direction="vertical" margin={100}/>
                 <LandingPage/>
-                <Marginer direction="vertical" margin={0}/>
                 <Introduction />
+                <Marginer direction="vertical" margin={50}/>
                 <Work />
+                <Marginer direction="vertical" margin={200}/>
+                <Scheduling />
+                <Quote />
+                <Blog />
+                <Contact />
+                <Footer />
             </Background>
         </PageContainer>
     );
