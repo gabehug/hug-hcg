@@ -5,7 +5,7 @@ import welcomeImg from "../../assets/welcomeImg.svg";
 
 const LandingPageContainer = styled.div`
     width: 100%;
-    height: 860px;
+    height: 1000px;
     background-color: #2D3A54;
     background-size: cover;
 `;
@@ -23,7 +23,6 @@ const CalloutImageContainer = styled.div`
     width: 42em;
     height: 22em;
     margin: 0 6em;
-
     img {
         width: 100%;
         height: 100%;

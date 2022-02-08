@@ -5,7 +5,7 @@ import styled from "styled-components";
 const ButtonWrapper = styled.div`
     font-family: proxima-nova, sans-serif;
     font-weight: 600;
-    position: absolute;
+    
     height: 3em;
     width: 8em;
     display: flex;
@@ -14,11 +14,8 @@ const ButtonWrapper = styled.div`
     box-sizing: border-box;
     border-radius: 5px;
     color: white;
-
     background: #8194AD;
     border: 0px;
-
-
     &: hover {
         border: 1px solid white;
         background-color: transparent;

@@ -5,7 +5,7 @@ import { Button } from "../button";
 
 const IntroductionContainer = styled.div`
     width: 100%;
-    height: 860px;
+    height: 1000px;
     background-color: #393C3E;
     background-size: cover;
 `;
@@ -44,7 +44,6 @@ const ImageContainer = styled.div`
     width: 42em;
     height: 22em;
     margin: -5em 6em;
-
     img {
         width: 100%;
         height: 100%;
