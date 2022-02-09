@@ -1,9 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import hugHCGLogo from "../../assets/hugHCGLogo";
-
 import { PageContainer } from "../../components/pageContainer";
 import { Marginer } from "../../components/marginer";
+import { useMediaQuery } from "react-responsive";
+import { DeviceSize } from "../responsive";
+import { MobileNavbar } from "./mobileNavLinks";
+import { NavLinks } from "./navLinks";
+import { SocialLinks } from "./socialLinks";
+import { Link } from "react-router-dom";
 
 
 const NavbarContainer = styled.div`
@@ -32,8 +37,8 @@ const LeftContainer = styled.div`
 `;
 
 const LogoContainer = styled.div`
-    width: auto;
-    height: 90px;
+    width: 9em;
+    height: auto;
 
     img {
         width: 100%;
@@ -41,77 +46,36 @@ const LogoContainer = styled.div`
     }
 `;
 
-const RightContainer = styled.div`
+const MiddleContainer = styled.div`
     display: flex;
+    flex: 2;
+    width: 100%;
     align-self: center;
-    margin-right: 2em;
+    justify-content: center;
 `;
 
-const MenuContainer = styled.div`
-    width: 32px;
-    height: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-
+const RightContainer = styled.div`
+    width: 9em;
+    height: auto;
 `;
 
-const Line1Container = styled.span`
-    width: 100%;
-    height: 3px;
-    background-color: white;
-    transform-origin: left;
-    transition: all 1s ease;
-
-    :active {
-        transform: rotate(45deg);
-    }
-    
-`;
-
-const Line2Container = styled.span`
-    width: 100%;
-    height: 3px;
-    background-color: white;
-    transform-origin: left;
-    transition: all 1s ease;
-
-    :active {
-        opacity: 0;
-    }
-`;
-
-const Line3Container = styled.span`
-    width: 100%;
-    height: 3px;
-    background-color: white;
-    transform-origin: left;
-    transition: all 1s ease;
-
-    :active {
-        transform:rotate(-45deg);
-    }
-`;
-
-
-
-export function Navbar({ menuOpen, setMenuOpen }) {
+export function Navbar(props) {
+    const isMobile = useMediaQuery({ maxWidth: DeviceSize.mobile });
     return (
         <PageContainer> 
-            <NavbarContainer> {menuOpen && "active"}
+            <NavbarContainer> 
                 <LeftContainer>
                     <LogoContainer>
-                        <img src= {hugHCGLogo} alt="logo"></img>
+                        <Link to="/" ><img src= {hugHCGLogo} alt="logo"></img></Link>
                     </LogoContainer>
                 </LeftContainer>
+                <MiddleContainer>
+                    <NavLinks />
+                </MiddleContainer>
                 <RightContainer>
-                    <MenuContainer>
-
-                        
-                    </MenuContainer>
+                    <SocialLinks />
                 </RightContainer>
             </NavbarContainer>
         </PageContainer>
-    )
+    );
 }
