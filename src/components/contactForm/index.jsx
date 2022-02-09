@@ -79,7 +79,7 @@ const MessageContainer  = styled.div`
 const ButtonContainer = styled.div`
     display: flex;
     align-items: left;
-    margin: 2em;
+    margin: 3em 2em 2em 2em;
     height: 3em;
     width: 8em;
     display: flex;

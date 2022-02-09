@@ -5,7 +5,7 @@ import { Marginer } from "../../components/marginer";
 
 const FooterContainer = styled.div`
     width: 100%;
-    height: 500px;
+    height: 450px;
     background-color: #272829;
     background-size: cover;
 `;
@@ -24,8 +24,9 @@ const LeftContainer = styled.div`
   margin: 4em 5em;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: left;
+  
 `;
 
 const LogoContainer = styled.div`
@@ -48,7 +49,7 @@ const CopywriteContainer = styled.div`
   font-size: 0.8em;
   color: #ACACAC;
   text-align: left;
-  margin: 11.5em 1.3em 0em 2em;
+  margin: 7em 1.3em 0em 2em;
 `;
 
 const RightContainer = styled.div`

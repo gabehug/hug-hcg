@@ -37,7 +37,7 @@ const LeftContainer = styled.div`
 `;
 
 const LogoContainer = styled.div`
-    width: 9em;
+    width: 10em;
     height: auto;
 
     img {
@@ -55,7 +55,7 @@ const MiddleContainer = styled.div`
 `;
 
 const RightContainer = styled.div`
-    width: 9em;
+    width: 10em;
     height: auto;
 `;
 

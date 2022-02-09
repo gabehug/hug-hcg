@@ -3,6 +3,7 @@ body {
   font-family: freight-display-pro, serif;
   font-weight: 500;
   font-style: normal;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
