@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { Marginer } from "../../components/marginer";
+import { Parallax } from "react-scroll-parallax";
 
 const WorkContainer = styled.div`
     width: 100%;
-    height: 1600px;
+    height: 800px;
     background-size: cover;
 `;
 
@@ -13,62 +14,72 @@ const Background = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 `;
 
 const TitleContainer = styled.div`
     width: 35em;
     height: 5em;
+    border-radius: 20px;
     margin: 3em 3em 2em 3em;
     color: white;
     font-size: 2em;
     background-color: #393C3E;
-    
 `;
 
 const TopSectionContainer = styled.div`
+    width: 70em;
+    height: auto;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
+`;
+
+const CardContainer = styled.div`
+    width: 25em;
+    height: 30em;
+    border-radius: 20px;
+    display: flex; 
+    flex-direction: column;
+    margin: 1.5em;
     align-items: center;
+    justify-content: center;
+    background-color: #2D3A54;
+    transition: 0.5s ease-in-out;
+
+    : hover {
+        border: 1px solid white;
+        background-color: white;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
 `;
 
 const CardTitle = styled.div`
-    width: 12em;
-    color: #2D3A54;
-    font-size: 1.8em;
-    margin: 4em ;
-    padding: 0.5em;
+    width: 16em;
+    height: 0em;
+    color: white ;
+    font-size: 1.2em;
+    align-items: center;
+    justify-content: center;
+    margin: 8em 1em -10em 1em;
 `;
 
 const CardText = styled.div`
-    width: 22em;
-    font-size: 1.5em;
-    justify-content: center;
-    text-align: left;
-    margin: 4em 0;
+    width: auto;
+    height: 20em;
+    font-size: 1.2em;
+    color: transparent;
+    text-align: center;
+    padding: 8em 2em 2em 2em;
+    transition: 0.5s ease-in-out;
+    
+    : hover {
+        font-size: 1.2em;
+        color: #2D3A54;
+    }
 `;
 
-const LineContainer = styled.div`
-    width: 70em;
-    height: 0.2em;
-    background-color: black;
-`;
-
-const MidSectionContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 2em;
-`;
-
-const BottomSectionContainer = styled.div`
-display: flex;
-flex-direction: row;
-justify-content: center;
-margin-top: 2em;
-`;
 
 export function Work(props) {
     return (
@@ -78,37 +89,39 @@ export function Work(props) {
                     <h1> What we do</h1>
                 </TitleContainer>
                 <TopSectionContainer>
-                    <CardTitle>
-                        <h1>Transition Management</h1>
-                    </CardTitle>
-                    <Marginer direction="horizontal" margin={60} />
-                    <CardText>
-                        <p>As transition management specialists, we’ll assist you in executing the program management of strategic actions across your company, including senior management transitions, acquisition integrations, divestiture separations, and other portfolio management actions.</p>
-                    </CardText>
+                    <Parallax speed={20}>
+                        <CardContainer>
+                            <Marginer direction="vertical" margin={10}/>
+                            <CardTitle>
+                                <h1>Human Resources</h1>
+                            </CardTitle>
+                            <CardText>
+                            <p>We provide interim senior level Human Resource leadership.  Our entire team has expertise in Human Capital Management (HCM), the comprehensive set of an organization’s practicesfor recruiting, managing, developing, and optimizing employees (as an intangible asset) in order to maximize their business value.</p>
+                            </CardText>
+                        </CardContainer>
+                    </Parallax>
+                    <Parallax speed={0}>
+                        <CardContainer>
+                            <CardTitle>
+                                <h1>Transition Management</h1>
+                            </CardTitle>
+                            <CardText>
+                            <p>As transition management specialists, we’ll assist you in executing the program management of strategic actions across your company, including senior management transitions, acquisition integrations, divestiture separations, and other portfolio management actions.</p>
+                            </CardText>
+                        </CardContainer>
+                    </Parallax>
+                    <Parallax speed={-10}>
+                        <CardContainer>
+                            <Marginer direction="vertical" margin={20}/>
+                            <CardTitle>
+                                <h1>Search</h1>
+                            </CardTitle>
+                            <CardText>
+                            <p>A different approach to recruiting, we’ll embed one or more of our team members into your organization to execute the search process, ensuring that not only do we find a candidate with the right set of knowledge, skills, and abilities, but someone who fits your unique organizational culture. </p>
+                            </CardText>
+                        </CardContainer>
+                    </Parallax>
                 </TopSectionContainer>
-                <Marginer direction="vertical" margin={40} />
-                <LineContainer />
-                <MidSectionContainer>
-                    <CardText>
-                        <p>We provide interim senior level Human Resource leadership.  Our entire team has expertise in Human Capital Management (HCM), the comprehensive set of an organization’s practicesfor recruiting, managing, developing, and optimizing employees (as an intangible asset) in order to maximize their business value.</p>
-                    </CardText>
-                    <Marginer direction="horizontal" margin={60} />
-                    <CardTitle>
-                        <h1>Human Resources</h1>
-                    </CardTitle>
-                </MidSectionContainer>
-                <Marginer direction="vertical" margin={30} />
-                <LineContainer />
-                <BottomSectionContainer>
-                    <CardTitle>
-                        <h1>Search</h1>
-                    </CardTitle>
-                    <Marginer direction="horizontal" margin={60} />
-                    <CardText>
-                        <p>A different approach to recruiting, we’ll embed one or more of our team members into your organization to execute the search process, ensuring that not only do we find a candidate with the right set of knowledge, skills, and abilities, but someone who fits your unique organizational culture. </p>
-                    </CardText>
-                </BottomSectionContainer>
-                <Marginer direction="vertical" margin={30} />
             </Background>
         </WorkContainer>
     )

@@ -15,19 +15,23 @@ const Background = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     background-color: #8194AD;
     
 `;
 
 const CalloutImageContainer = styled.div`
-  width: 22em;
-  height: 22em;
+  width: 20em;
+  height: 20em;
   margin: 3.5em;
+  display: flex;
+  justify-content: space-around;
+
   img {
     width: 100%;
     height: 100%;
   }
+  
 `;
 
 const QuoteText = styled.div`
@@ -37,6 +41,7 @@ const QuoteText = styled.div`
   text-align: left;
   line-height: 1.4em;
   color: white;
+  padding: 3.5em;
   
 `;
 
@@ -47,7 +52,6 @@ export function Quote(props) {
                 <CalloutImageContainer>
                   <img src={quoteIMG} alt="img" />
                 </CalloutImageContainer>
-                <Marginer direction="horizontal" margin={200} />
                 <QuoteText>
                   <p>“Trust is the glue of life. It’s the most essential ingredient in effective communication. It’s the foundational principle that holds all relationships.” – Stephen Covey</p>
                 </QuoteText>

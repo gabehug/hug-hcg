@@ -33,6 +33,7 @@ const BlogPostContainer = styled.div`
   width: 60%;
   height: 550px;
   background-color: #393C3E;
+  border-radius: 20px;
 `;
 
 const DateContainer = styled.div`
