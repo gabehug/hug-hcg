@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Marginer } from "../../components/marginer";
 import { Button } from "../button";
 import contactIMG from "../../assets/contactIMG.png";
+import { ContactForm } from "../contactForm";
 
 
 const ContactContainer = styled.div`
@@ -45,7 +46,6 @@ const FormContainer = styled.div`
   margin: 2em 0;
   width: 100%;
   height: 300px;
-  background-color: grey;
 `;
 
 const RightContainer = styled.div`
@@ -80,9 +80,8 @@ export function Contact(props) {
                     <p>To help us best serve your inquiry, we recommend that you first describe the reason you’d like to connect. You may also email or call us to make an appointment. Our general response time is one business day.</p>
                   </TextContainer>
                   <FormContainer>
-                    This needs to be a contact form
+                    <ContactForm />
                   </FormContainer>
-                  <Button>Submit</Button>
                 </LeftContainer>
                 <Marginer direction="horizontal" margin={100} />
                 <RightContainer>
