@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { HomePage } from "./containers/HomePage";
 import { About } from './containers/About';
@@ -15,7 +14,7 @@ function App() {
           <Routes>
             <Route path="/" exact element={<HomePage/>}/>
             <Route path="/about" exact element={<About/>}/>
-          </Routes>  
+          </Routes> 
         </Router>    
       </ParallaxProvider>
     </div>

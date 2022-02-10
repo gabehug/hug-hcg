@@ -83,7 +83,8 @@ const CardText = styled.div`
 
 export function Work(props) {
     return (
-        <WorkContainer>
+        <WorkContainer id="work">
+            <Marginer direction="vertical" margin={50}/>
             <Background>
                 <TitleContainer>
                     <h1> What we do</h1>

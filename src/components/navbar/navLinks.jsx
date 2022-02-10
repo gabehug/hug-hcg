@@ -31,6 +31,13 @@ const LinkItem = styled.li`
     :hover {
         border-top: 2px solid #8194AD;
     }
+
+    a {
+        text-decoration: none;
+    color: inherit;
+    padding: 1.5em 0.5em;
+    font-size: inherit;
+    }
 `;
 
 const AnchorLink = styled(Link)`
@@ -43,14 +50,16 @@ const AnchorLink = styled(Link)`
 
 
 
+
+
 export function NavLinks(props) {
     return (
         <NavLinksContainer>
             <LinksWrapper>
                 <LinkItem><AnchorLink to="/about">About</AnchorLink></LinkItem>
-                <LinkItem><AnchorLink to="work">Areas of Practice</AnchorLink></LinkItem>
-                <LinkItem><AnchorLink to="#blog">Blog</AnchorLink></LinkItem>
-                <LinkItem><AnchorLink to="#contact">Contact Us</AnchorLink></LinkItem>
+                <LinkItem><a href="#work">Areas of Practice</a></LinkItem>
+                <LinkItem><a href="#blog">Blog</a></LinkItem>
+                <LinkItem><a href="#contact">Contact Us</a></LinkItem>
             </LinksWrapper>
         </NavLinksContainer>
     );

@@ -5,7 +5,7 @@ import { InlineWidget } from "react-calendly";
 
 const SchedulingContainer = styled.div`
     width: 100%;
-    height: 1200px;
+    height: 1000px;
     background-size: cover;
     background-color: #2D3A54;
 `;

@@ -60,7 +60,7 @@ const RightContainer = styled.div`
 `;
 
 export function Navbar(props) {
-    const isMobile = useMediaQuery({ maxWidth: DeviceSize.mobile });
+    
     return (
         <PageContainer> 
             <NavbarContainer> 

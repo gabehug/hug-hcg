@@ -70,7 +70,7 @@ const ImageContainer = styled.div`
 
 export function Contact(props) {
     return (
-        <ContactContainer>
+        <ContactContainer id="contact">
             <Background>
                 <LeftContainer>
                   <TitleContainer>

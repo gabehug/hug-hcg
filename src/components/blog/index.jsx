@@ -5,7 +5,7 @@ import { Button } from "../button";
 
 const BlogContainer = styled.div`
   width: 100%;
-  height: 1000px;
+  height: 1100px;
   background-size: cover;
   background-color: #fff;
 `;
@@ -23,6 +23,7 @@ const TitleContainer = styled.div`
   font-size: 2em;
   color: #393C3E;
   margin: 2em;
+  margin-top: 4em;
 `;
 
 const BlogPostContainer = styled.div`
@@ -58,7 +59,7 @@ const PostTextContainer = styled.div`
 
 export function Blog(props) {
     return (
-        <BlogContainer>
+        <BlogContainer id="blog">
             <Background>
                 <TitleContainer>
                   <h1>See what we have to say</h1>
