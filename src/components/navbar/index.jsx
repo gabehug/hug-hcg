@@ -24,10 +24,6 @@ const NavbarContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    :active {
-        background-color: #393C3E;
-    }
 `;
 
 const LeftContainer = styled.div`
