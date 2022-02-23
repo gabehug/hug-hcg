@@ -16,6 +16,7 @@ const ButtonWrapper = styled.div`
     color: white;
     background: #8194AD;
     border: 0px;
+    
     &: hover {
         border: 1px solid white;
         background-color: transparent;

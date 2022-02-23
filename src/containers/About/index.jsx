@@ -24,11 +24,11 @@ export function About(props) {
         <PageContainer>
             <Background>
                 <Navbar/>
-                <AboutLanding />
-                <AboutIntro />
-                <AboutInformation />
-                <AboutGoal />
-                <AboutTeam />
+                    <AboutLanding />
+                    <AboutIntro />
+                    <AboutInformation />
+                    <AboutGoal />
+                    <AboutTeam />
                 <Footer />
             </Background>
         </PageContainer>

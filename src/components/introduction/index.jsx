@@ -3,6 +3,8 @@ import styled from "styled-components";
 import intro from "../../assets/intro.svg";
 import { Button } from "../button";
 
+import { Link } from "react-router-dom";
+
 const IntroductionContainer = styled.div`
     width: 100%;
     height: 1000px;
@@ -18,7 +20,7 @@ const Background = styled.div`
 `;
 
 const TopSectionContainer = styled.div`
-    margin: 3em 6em;
+    margin: 4.5em 6em 2em 6em;
     width: 30em;
     color: white;
     font-size 2em;
@@ -50,14 +52,15 @@ const ImageContainer = styled.div`
     }
 `;
 
-const ButtonContainer = styled.div`
+const ButtonContainer = styled(Link)`
+    text-decoration: none;
     margin: 2em 12em;
 `;
 
 
 export function Introduction(props) {
     return (
-        <IntroductionContainer>
+        <IntroductionContainer id="about">
             <Background>
                 <TopSectionContainer>
                         <h1>Leadership transitions are difficult for most organizations</h1>
@@ -70,7 +73,7 @@ export function Introduction(props) {
                         <img src= {intro} alt="img" />
                     </ImageContainer>
                 </BottomSectionContainer>
-                <ButtonContainer>
+                <ButtonContainer to="/about">
                     <Button>Learn More</Button>
                 </ButtonContainer>
             </Background>

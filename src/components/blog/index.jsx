@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Marginer } from "../../components/marginer";
 import { Button } from "../button";
+import { Link } from "react-router-dom";
 
 const BlogContainer = styled.div`
   width: 100%;
@@ -54,7 +55,10 @@ const PostTextContainer = styled.div`
   height: auto;
   font-size: 1.3em;
 `;
-
+const ButtonContainer = styled(Link)`
+    text-decoration: none;
+    margin: 2em 12em;
+`;
 
 
 export function Blog(props) {
@@ -73,7 +77,9 @@ export function Blog(props) {
                     <p> Nine months ago I started on a new professional journey.  A journey that I have been instrumental in sending many others on over my twenty-one years of work.  I was exited from my corporate role for what was, in the end analysis...</p>
                   </PostTextContainer>
                   <Marginer direction="vertical" margin={60}/>
-                  <Button>Read more</Button>
+                  <ButtonContainer to="/blog">
+                    <Button>Read more</Button>
+                  </ButtonContainer>
                 </BlogPostContainer>
             </Background>
         </BlogContainer>

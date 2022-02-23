@@ -3,6 +3,7 @@ import { HomePage } from "./containers/HomePage";
 import { About } from './containers/About';
 import { Blog } from './containers/Blog';
 import { ParallaxProvider } from "react-scroll-parallax";
+import { ScrollToTop } from './components/scrollToTop/ScrollToTop';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -12,6 +13,7 @@ function App() {
     <div className='App'>
       <ParallaxProvider>
         <Router>
+          <ScrollToTop />
           <Routes>
             <Route path="/" exact element={<HomePage/>}/>
             <Route path="/about" element={<About/>}/>
