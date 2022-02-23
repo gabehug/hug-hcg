@@ -68,14 +68,14 @@ const CardTitle = styled.div`
 const CardText = styled.div`
     width: auto;
     height: 20em;
-    font-size: 1.2em;
+    font-size: 1.4em;
     color: transparent;
     text-align: center;
-    padding: 8em 2em 2em 2em;
+    padding: 5em 2em 2em 2em;
     transition: 0.5s ease-in-out;
     
     : hover {
-        font-size: 1.2em;
+        font-size: 1.4em;
         color: #2D3A54;
     }
 `;
