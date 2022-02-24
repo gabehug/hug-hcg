@@ -5,7 +5,7 @@ import { InlineWidget } from "react-calendly";
 
 const SchedulingContainer = styled.div`
     width: 100%;
-    height: 1000px;
+    height: 1050px;
     background-size: cover;
     background-color: #2D3A54;
 `;
@@ -22,7 +22,7 @@ const Background = styled.div`
 const TitleContainer = styled.div`
     width: 35em;
     height: 5em;
-    margin: 2em;
+    margin: 3em 2em 0em 2em;
     color: white;
     font-size: 2em;
 `;
@@ -35,7 +35,7 @@ const WidgetContainer = styled.div`
 
 export function Scheduling(props) {
     return (
-        <SchedulingContainer>
+        <SchedulingContainer id="scheduling">
             <Background>
                 <TitleContainer>
                     <h1>Book an Appointment </h1>

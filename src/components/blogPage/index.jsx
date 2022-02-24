@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Marginer } from "../../components/marginer";
 import { Button } from "../button";
-import { PostContent } from "../blogPage/postContent";
 
 const BlogContainer = styled.div`
   width: 100%;
@@ -15,23 +14,24 @@ const Background = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column
 `;
 
 
-
 const PostsContainer = styled.div`
+  width: 100%;
+  height: 100%;
   display: flex;
+  margin-top: -3.5em;
   flex-direction: row;
-  justify-content: space-evenly;
-  
+  justify-content: center;
 `;
 
 
 const BlogPostContainer = styled.button`
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   width: 80em;
   height: 80em;
@@ -45,7 +45,7 @@ const BlogPostContainer = styled.button`
 const DateContainer = styled.div`
   color: #393C3E;
   font-size: 1.4em;
-  margin-top: 10em;
+  margin-top: 7em;
 `;
 
 const PostTitleContainer = styled.div`

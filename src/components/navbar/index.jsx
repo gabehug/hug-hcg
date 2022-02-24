@@ -9,6 +9,7 @@ import { MobileNavbar } from "./mobileNavLinks";
 import { NavLinks } from "./navLinks";
 import { SocialLinks } from "./socialLinks";
 import { Link } from "react-router-dom";
+import { Logo } from "../logo";
 
 
 const NavbarContainer = styled.div`
@@ -61,9 +62,7 @@ export function Navbar(props) {
         <PageContainer> 
             <NavbarContainer> 
                 <LeftContainer>
-                    <LogoContainer>
-                        <Link to="/" ><img src= {hugHCGLogo} alt="logo"></img></Link>
-                    </LogoContainer>
+                    <Logo />
                 </LeftContainer>
                 <MiddleContainer>
                     <NavLinks />

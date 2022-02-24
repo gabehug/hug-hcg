@@ -5,7 +5,7 @@ import goalImg from "../../assets/goalImg.png";
 
 const GoalContainer = styled.div`
     width: 100%;
-    height: 1400px;
+    height: 900px;
     background-color: #fff;
     background-size: cover;
 `;
@@ -66,23 +66,6 @@ const TitleContainer = styled.div`
     margin: 0 3em;
 `;
 
-const BottomContainer = styled.div`
-    width: 100%;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #8194AD;
-`;
-
-const QuoteContainer = styled.div`
-    width: 80%;
-    color: #fff;
-    font-size: 2em;
-    text-align: left;
-    margin: 2em;
-`;
-
 export function AboutGoal(props) {
     return (
         <GoalContainer>
@@ -93,7 +76,10 @@ export function AboutGoal(props) {
                             <h1>Our Goal</h1>
                         </TitleContainer>
                         <TextContainer>
-                            <p>We recognize that every business needs someone to 
+                            <p>Business transformations however big 
+or small typically fail on the human front 
+not the product, services, or operational 
+fronts. We recognize that every business needs someone to 
 manage hiring, training, salaries, and employee relations.</p>
                             <p>Whether you sell products or services, 
 Hug | Human Capital Group can help run your company’s HR tasks.</p>
@@ -103,14 +89,6 @@ Hug | Human Capital Group can help run your company’s HR tasks.</p>
                         <img src= {goalImg} alt="img" />
                     </ImageContainer>
                 </TopContainer>
-                <BottomContainer>
-                    <QuoteContainer>
-                            <h1>Business transformations however big 
-or small typically fail on the human front 
-not the product, services, or operational 
-fronts. </h1>       
-                    </QuoteContainer>
-                </BottomContainer>
             </Background>
         </GoalContainer>
     )
