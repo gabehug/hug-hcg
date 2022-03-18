@@ -5,6 +5,7 @@ import goalImg from "../../assets/goalImg.png";
 import teamGraphic from "../../assets/teamGraphic.png";
 import keith from "../../assets/keith.png";
 import { Button } from "../button";
+import { Link } from "react-router-dom";
 
 const TeamContainer = styled.div`
     width: 100%;
@@ -152,9 +153,9 @@ const TextContainer = styled.div`
     margin: 0 0 1em 1em;
 `;
 
-const ButtonContainer = styled.div`
+const ButtonContainer = styled(Link)`
     margin-left: 1em;
-
+    text-decoration: none;
 `;
 
 export function AboutTeam(props) {
@@ -195,7 +196,7 @@ export function AboutTeam(props) {
                                 <p>Take a look at our blog for more about Keith, Hug Human 
     Capital Group, and more!</p>       
                         </TextContainer>
-                        <ButtonContainer>
+                        <ButtonContainer to="/blog">
                             <Button>Click here</Button>
                         </ButtonContainer>
                     </BottomRightContainer>

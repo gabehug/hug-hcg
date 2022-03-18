@@ -60,7 +60,7 @@ const ButtonContainer = styled(Link)`
 
 export function Introduction(props) {
     return (
-        <IntroductionContainer id="about">
+        <IntroductionContainer id="aboutLink">
             <Background>
                 <TopSectionContainer>
                         <h1>Leadership transitions are difficult for most organizations</h1>

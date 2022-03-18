@@ -34,9 +34,9 @@ const LinkItem = styled.li`
 
     a {
         text-decoration: none;
-    color: inherit;
-    padding: 1.5em 0.5em;
-    font-size: inherit;
+        color: inherit;
+        padding: 1.5em 0.5em;
+        font-size: inherit;
     }
 `;
 
@@ -56,10 +56,10 @@ export function NavLinks(props) {
     return (
         <NavLinksContainer>
             <LinksWrapper>
-                <LinkItem><a href="#about">About</a></LinkItem>
-                <LinkItem><a href="#work">Areas of Practice</a></LinkItem>
-                <LinkItem><a href="#blog">Blog</a></LinkItem>
-                <LinkItem><a href="#contact">Contact Us</a></LinkItem>
+                <LinkItem><a href="/#aboutLink">About</a></LinkItem>
+                <LinkItem><a href="/#work">Areas of Practice</a></LinkItem>
+                <LinkItem><a href="/#blog">Blog</a></LinkItem>
+                <LinkItem><a href="/#contact">Contact Us</a></LinkItem>
             </LinksWrapper>
         </NavLinksContainer>
     );
