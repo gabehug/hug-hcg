@@ -15,7 +15,7 @@ const Background = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     background-color: #8194AD;
     
 `;
@@ -23,13 +23,13 @@ const Background = styled.div`
 const CalloutImageContainer = styled.div`
   width: 20em;
   height: 20em;
-  margin: 3.5em;
+  margin: 3em;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 
   img {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
   }
   
 `;
@@ -37,11 +37,11 @@ const CalloutImageContainer = styled.div`
 const QuoteText = styled.div`
   width: 22em;
   height: auto;
-  font-size: 2em;
+  font-size: 1.7em;
   text-align: left;
-  line-height: 1.4em;
+  line-height: 1.5em;
   color: white;
-  padding: 3.5em;
+  padding: 3em;
   
 `;
 

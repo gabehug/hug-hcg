@@ -23,7 +23,7 @@ const Background = styled.div`
 const TitleContainer = styled.div`
   font-size: 2em;
   color: #393C3E;
-  margin: 2em;
+  margin: 2em 2em 1em 2em;
   margin-top: 4em;
 `;
 
@@ -41,12 +41,12 @@ const BlogPostContainer = styled.div`
 const DateContainer = styled.div`
   color: white;
   font-size: 1.5em;
-  margin: 3em 0 0 0em;
+  margin: 3em 0 0 0;
 `;
 
 const PostTitleContainer = styled.div`
   color: white;
-  font-size: 1.8em;
+  font-size: 1.7em;
 `;
 
 const PostTextContainer = styled.div`
@@ -57,7 +57,7 @@ const PostTextContainer = styled.div`
 `;
 const ButtonContainer = styled(Link)`
     text-decoration: none;
-    margin: 2em 12em;
+    margin: 0em 12em;
 `;
 
 

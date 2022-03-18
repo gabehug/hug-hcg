@@ -33,10 +33,9 @@ const TopContainer = styled.div`
 `;
 
 const TitleContainer = styled.div`
-    width: 35em;
-    height: 5em;
-    border-radius: 20px;
-    margin: 0em 3em;
+    width: 45em;
+    height: auto;
+    margin: 3em 3em 0em 3em;
     color: white;
     font-size: 2em;
     background-color: #393C3E;
@@ -71,7 +70,7 @@ const ImageContainer = styled.div`
     img {
         width: 13em;
         height: auto;
-        border-radius: 20px;
+        border-radius: 10px;
 
         &: hover {
             border: 1px solid white;
@@ -91,7 +90,7 @@ const RightContainer = styled.div`
 
 const NameContainer = styled.div`
     width: 100%;
-    font-size: 2em;
+    font-size: 1.7em;
     text-align: left;
     line-height: 0em;
     color: #2D3A54;

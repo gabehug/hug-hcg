@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-import hugHCGLogo from "../../assets/hugHCGLogo";
 import { Marginer } from "../../components/marginer";
+import linkedIn from "../../assets/linkedIn.png";
+import { Logo } from "../logo";
 
 const FooterContainer = styled.div`
     width: 100%;
@@ -82,17 +84,33 @@ const ListItemsContainer = styled.div`
   height: auto;
 `;
 
-const Link = styled.div`
+const ImgContainer = styled.div`
+  width: 3.4em;
+  height: auto;
+  margin-left: 0.2em;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+`;
+
+const LinkItem = styled.div`
   font-size: 1.1em;
   font-family: proxima-nova, sans-serif;
   font-weight: 200;
   color: #ACACAC;
   text-align: left;
   margin: 1em 0 1em 2em;
+  text-decoration: none;
   
   &: hover {
     color: #fff;
     cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
   }
 `;
 
@@ -102,7 +120,7 @@ export function Footer(props) {
             <Background>
               <LeftContainer>
                 <LogoContainer>
-                  <img src= {hugHCGLogo} alt="logo.img" />
+                  <Logo />
                 </LogoContainer>
                 <DescriptionContainer>
                   <p>We believe that what what makes any organization or business thrive is the passion, engagement, and alignment of employees, the human capital.  </p>
@@ -118,11 +136,10 @@ export function Footer(props) {
                     <h1>Explore</h1>
                   </ListTitle>
                   <ListItemsContainer>
-                    <Link>About</Link>
-                    <Link>Services</Link>
-                    <Link>Book an Appointment</Link>
-                    <Link>Meet the team</Link>
-                    <Link>Blog</Link>
+                    <LinkItem><a href="#about">About</a></LinkItem>
+                    <LinkItem><a href="#work">Areas of Practice</a></LinkItem>
+                    <LinkItem><a href="#scheduling">Book an Appointment</a></LinkItem>
+                    <LinkItem><a href="#blog">Blog</a></LinkItem>
                   </ListItemsContainer>
                 </ListContainer>
                 <ListContainer>
@@ -130,9 +147,11 @@ export function Footer(props) {
                     <h1>Contact Us</h1>
                   </ListTitle>
                   <ListItemsContainer>
-                    <Link>(651) 329-2875</Link>
-                    <Link>hug.humancapitalgroup@gmail.com</Link>
-                    <Link>LINKEDIN</Link>
+                    <LinkItem><a href="tel:6513292875">(651) 329-2875</a></LinkItem>
+                    <LinkItem><a href="mailto: hug.humancapitalgroup@gmail.com">Email us</a></LinkItem>
+                    <ImgContainer>
+                      <LinkItem><a href="https://www.linkedin.com/in/keith-hug-2a7905/" target="_blank"> <img src= {linkedIn} alt="linkedinLogo"></img></a></LinkItem>
+                    </ImgContainer>
                   </ListItemsContainer>
                 </ListContainer>
                 <ListContainer>

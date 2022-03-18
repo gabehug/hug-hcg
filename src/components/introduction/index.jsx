@@ -35,8 +35,8 @@ const BottomSectionContainer = styled.div`
 
 const TextContainer = styled.div`
     width: 800px;
+    margin: 0 0 0 6em;
     font-size: 1.5em;
-    margin: 0 0 0 7em;
     text-align: left;
     line-height: 1.5em;
     color: white;
