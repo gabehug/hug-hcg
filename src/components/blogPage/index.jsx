@@ -67,6 +67,10 @@ const TextContainer = styled.div`
   text-align: left;
   color: #393C3E;
   margin: 3em 2em 2em 2em;
+  
+  p {
+    margin-bottom: 1.2em;
+  }
 `;
 
 export function BlogPage(props) {

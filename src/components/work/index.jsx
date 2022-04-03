@@ -80,6 +80,7 @@ const CardText = styled.div`
     }
 `;
 
+// Carousel code for work section  https://react-bootstrap.github.io/components/carousel/
 
 export function Work(props) {
     return (
@@ -90,38 +91,8 @@ export function Work(props) {
                     <h1> What we do</h1>
                 </TitleContainer>
                 <TopSectionContainer>
-                    <Parallax speed={20}>
-                        <CardContainer>
-                            <Marginer direction="vertical" margin={10}/>
-                            <CardTitle>
-                                <h1>Human Resources</h1>
-                            </CardTitle>
-                            <CardText>
-                            <p>We provide interim senior level Human Resource leadership.  Our entire team has expertise in Human Capital Management (HCM), the comprehensive set of an organization’s practices for recruiting, managing, developing, and optimizing employees (as an intangible asset) in order to maximize their business value.</p>
-                            </CardText>
-                        </CardContainer>
-                    </Parallax>
-                    <Parallax speed={0}>
-                        <CardContainer>
-                            <CardTitle>
-                                <h1>Transition Management</h1>
-                            </CardTitle>
-                            <CardText>
-                            <p>As transition management specialists, we’ll assist you in executing the program management of strategic actions across your company, including senior management transitions, acquisition integrations, divestiture separations, and other portfolio management actions.</p>
-                            </CardText>
-                        </CardContainer>
-                    </Parallax>
-                    <Parallax speed={-10}>
-                        <CardContainer>
-                            <Marginer direction="vertical" margin={20}/>
-                            <CardTitle>
-                                <h1>Search</h1>
-                            </CardTitle>
-                            <CardText>
-                            <p>A different approach to recruiting, we’ll embed one or more of our team members into your organization to execute the search process, ensuring that not only do we find a candidate with the right set of knowledge, skills, and abilities, but someone who fits your unique organizational culture. </p>
-                            </CardText>
-                        </CardContainer>
-                    </Parallax>
+                    
+
                 </TopSectionContainer>
             </Background>
         </WorkContainer>

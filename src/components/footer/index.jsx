@@ -136,10 +136,10 @@ export function Footer(props) {
                     <h1>Explore</h1>
                   </ListTitle>
                   <ListItemsContainer>
-                    <LinkItem><a href="#about">About</a></LinkItem>
-                    <LinkItem><a href="#work">Areas of Practice</a></LinkItem>
-                    <LinkItem><a href="#scheduling">Book an Appointment</a></LinkItem>
-                    <LinkItem><a href="#blog">Blog</a></LinkItem>
+                    <LinkItem><a href="/#about">About</a></LinkItem>
+                    <LinkItem><a href="/#work">Areas of Practice</a></LinkItem>
+                    <LinkItem><a href="/#scheduling">Book an Appointment</a></LinkItem>
+                    <LinkItem><a href="/#blog">Blog</a></LinkItem>
                   </ListItemsContainer>
                 </ListContainer>
                 <ListContainer>
