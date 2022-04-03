@@ -5,7 +5,7 @@ import { Marginer } from "../marginer";
 
 const IntroductionContainer = styled.div`
     width: 100%;
-    height: 900px;
+    height: 1000px;
     background-color: #2D3A54;
     background-size: cover;
 `;
