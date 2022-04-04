@@ -44,7 +44,7 @@ const TitleContainer = styled.div`
     color: white;
     font-size: 2.2em;
     text-align: left;
-    margin: 2em 0;
+    margin: 2em 0em 0em 0em;
 `;
 
 const TextContainer = styled.div`

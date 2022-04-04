@@ -35,7 +35,7 @@ const TopContainer = styled.div`
 const TitleContainer = styled.div`
     width: 45em;
     height: auto;
-    margin: 3em 3em 0em 3em;
+    margin: 0em 3em 0em 3em;
     color: white;
     font-size: 2em;
     background-color: #393C3E;
@@ -49,7 +49,6 @@ const MiddleContainer = styled.div`
     justify-content: center;
     align-items: center;
     font-size: 1.5em;
-    margin: 0;
 `;
 
 const LeftContainer = styled.div`
@@ -72,10 +71,7 @@ const ImageContainer = styled.div`
         height: auto;
         border-radius: 10px;
 
-        &: hover {
-            border: 1px solid white;
-            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-        }
+        
     }
 `;
 
@@ -84,7 +80,7 @@ const RightContainer = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 `;
 
@@ -99,7 +95,6 @@ const NameContainer = styled.div`
 const PositionContainer  = styled.div`
     width: 100%;
     font-size: 1em;
-    line-height: 0em;
     text-align: left;
 `;
 
@@ -131,7 +126,7 @@ const BottomRightContainer = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
 `;
 
@@ -140,20 +135,18 @@ const BottomTitleContainer = styled.div`
     color: #fff;
     font-size: 2.2em;
     text-align: left;
-    margin: 0em;
 `;
 
 const TextContainer = styled.div`
-    width: 500px;
+    width: 600px;
     font-size: 1.2em;
     text-align: left;
     line-height: 2em;
     color: #fff;
-    margin: 0 0 1em 1em;
 `;
 
 const ButtonContainer = styled(Link)`
-    margin-left: 1em;
+    margin-top: 1.5em;
     text-decoration: none;
 `;
 
