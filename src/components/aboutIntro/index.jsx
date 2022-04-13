@@ -5,7 +5,7 @@ import { Marginer } from "../marginer";
 
 const IntroductionContainer = styled.div`
     width: 100%;
-    height: 900px;
+    height: 1000px;
     background-color: #2D3A54;
     background-size: cover;
 `;
@@ -44,7 +44,7 @@ const TitleContainer = styled.div`
     color: white;
     font-size: 2.2em;
     text-align: left;
-    margin: 2em 0;
+    margin: 2em 0em 0em 0em;
 `;
 
 const TextContainer = styled.div`

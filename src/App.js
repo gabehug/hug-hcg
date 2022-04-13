@@ -1,4 +1,5 @@
 import './App.css';
+import React, { Component } from 'react';
 import { HomePage } from "./containers/HomePage";
 import { About } from './containers/About';
 import { Blog } from './containers/Blog';

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const BlogContainer = styled.div`
   width: 100%;
-  height: 1100px;
+  height: 800px;
   background-size: cover;
   background-color: #fff;
 `;
@@ -15,25 +15,19 @@ const Background = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
 `;
 
-const TitleContainer = styled.div`
-  font-size: 2em;
-  color: #393C3E;
-  margin: 2em 2em 1em 2em;
-  margin-top: 4em;
-`;
 
 const BlogPostContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
-  width: 60%;
-  height: 550px;
+  justify-content: center;
+  width: 70%;
+  height: 600px;
   background-color: #393C3E;
   border-radius: 20px;
 `;
@@ -41,7 +35,7 @@ const BlogPostContainer = styled.div`
 const DateContainer = styled.div`
   color: white;
   font-size: 1.5em;
-  margin: 3em 0 0 0;
+  margin-bottom: 1em;
 `;
 
 const PostTitleContainer = styled.div`
@@ -51,13 +45,13 @@ const PostTitleContainer = styled.div`
 
 const PostTextContainer = styled.div`
   color: white;
-  width: 30em;
+  width: 40em;
   height: auto;
   font-size: 1.3em;
 `;
 const ButtonContainer = styled(Link)`
     text-decoration: none;
-    margin: 0em 12em;
+    margin-top: 3em;
 `;
 
 
@@ -65,9 +59,6 @@ export function Blog(props) {
     return (
         <BlogContainer id="blog">
             <Background>
-                <TitleContainer>
-                  <h1>See what we have to say</h1>
-                </TitleContainer>
                 <BlogPostContainer>
                   <DateContainer> 3/11/19 </DateContainer>
                   <PostTitleContainer> 
@@ -76,7 +67,6 @@ export function Blog(props) {
                   <PostTextContainer> 
                     <p> Nine months ago I started on a new professional journey.  A journey that I have been instrumental in sending many others on over my twenty-one years of work.  I was exited from my corporate role for what was, in the end analysis...</p>
                   </PostTextContainer>
-                  <Marginer direction="vertical" margin={60}/>
                   <ButtonContainer to="/blog">
                     <Button>Read more</Button>
                   </ButtonContainer>

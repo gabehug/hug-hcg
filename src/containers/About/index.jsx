@@ -24,7 +24,6 @@ export function About(props) {
         <PageContainer>
             <Background>
                 <Navbar/>
-                    <AboutLanding />
                     <AboutIntro />
                     <AboutInformation />
                     <AboutGoal />

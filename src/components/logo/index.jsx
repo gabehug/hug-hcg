@@ -4,6 +4,7 @@ import PageContainer from "../../components/pageContainer";
 import { Link } from "react-router-dom";
 import hugHCGLogo from "../../assets/hugHCGLogo";
 
+
 const Background = styled.div`
     width: auto;
     height: auto;

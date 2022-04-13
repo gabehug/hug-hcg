@@ -18,13 +18,14 @@ const Background = styled.div`
 const NameContainer = styled.div`
     width: 14em;
     height: 2em;
-    margin: 2em;
+    margin: 2em 2em 2.5em 2em;
 
     input {
         width: 100%;
         height: 100%;
         border-radius: 5px;
         border: 1px solid #8194AD;
+        padding: 0.5em;
     }
 
     p {
@@ -39,13 +40,14 @@ const NameContainer = styled.div`
 const EmailContainer = styled.div`
     width: 14em;
     height: 2em;
-    margin: 2em;
+    margin: 2em 2em 2.5em 2em;
 
     input {
         width: 100%;
         height: 100%;
         border-radius: 5px;
         border: 1px solid #8194AD;
+        padding: 0.5em;
     }
 
     p {
@@ -59,13 +61,14 @@ const EmailContainer = styled.div`
 const MessageContainer  = styled.div`
     width: 36em;
     height: 10em;
-    margin: 2em;
+    margin: 2em 2em 2.5em 2em;
 
     input {
         width: 100%;
         height: 100%;
         border-radius: 5px;
         border: 1px solid #8194AD;
+        padding: 0.5em
     }
 
     p {

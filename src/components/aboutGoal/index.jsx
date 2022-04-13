@@ -25,14 +25,13 @@ const TopContainer = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     background-color: #393C3E;
 `;
 
 const TextContainer = styled.div`
-    width: 900px;
+    width: 860px;
     font-size: 1.5em;
-    margin: 2em 1em 2em 4.8em;
     text-align: left;
     line-height: 1.5em;
     color: #fff;
@@ -55,7 +54,9 @@ const ImageContainer = styled.div`
 const LeftContainer = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 8em;
 `;
 
 const TitleContainer = styled.div`
@@ -63,7 +64,7 @@ const TitleContainer = styled.div`
     color: #fff;
     font-size: 2.2em;
     text-align: left;
-    margin: 0 3em;
+    margin: 0 0em;
 `;
 
 export function AboutGoal(props) {

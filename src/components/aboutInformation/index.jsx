@@ -32,9 +32,9 @@ const TopContainer = styled.div`
 const TextContainer = styled.div`
     width: 700px;
     font-size: 1.5em;
-    margin: 4em;
     text-align: left;
     line-height: 1.5em;
+    margin: 4em;
 `;
 
 const ImageContainer = styled.div`
@@ -57,6 +57,7 @@ const BottomContainer = styled.div`
     height: 900px;
     display: flex;
     flex-direction: row;
+    align-items: center;
 `;
 
 const BottomImageContainer = styled.div`
@@ -77,6 +78,7 @@ const RightContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 `;
 
 const TitleContainer = styled.div`
@@ -84,7 +86,15 @@ const TitleContainer = styled.div`
     color: #2D3A54;
     font-size: 2.2em;
     text-align: left;
-    margin: 0em 2em -2em 2em;
+    margin: 0em 0em -2em 0em;
+`;
+
+const AltTextContainer = styled.div`
+    width: 700px;
+    font-size: 1.5em;
+    text-align: left;
+    line-height: 1.5em;
+    margin: 2em 0em;
 `;
 
 export function AboutInformation(props) {
@@ -112,7 +122,7 @@ alignment of employees, the human capital.  </p>
                         <TitleContainer>
                             <h1>Why are we here?</h1>
                         </TitleContainer>
-                        <TextContainer>
+                        <AltTextContainer>
                             <p>We are here to assist with all aspects of human beings 
 when you are undergoing a transformation whether 
 due to merger, acquisition, a failing business model, 
@@ -121,7 +131,7 @@ HR support, M&A HR due diligence support, acquisition
 integration planning, culture / change project management 
 expertise, or executive search, we can assist you in managing 
 the human capital elements of a transformation effort.</p>
-                        </TextContainer>
+                        </AltTextContainer>
                     </RightContainer>
                 </BottomContainer>
             </Background>
