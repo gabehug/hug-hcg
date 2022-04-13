@@ -5,7 +5,7 @@ import quoteIMG  from "../../assets/quoteIMG.png";
 
 const QuoteContainer = styled.div`
     width: 100%;
-    height: 500px;
+    height: 350px;
     background-size: cover;
 `;
 
@@ -21,15 +21,15 @@ const Background = styled.div`
 `;
 
 const CalloutImageContainer = styled.div`
-  width: 20em;
-  height: 20em;
+  width: 15em;
+  height: 15em;
   margin: 3em;
   display: flex;
   justify-content: center;
 
   img {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
   }
   
 `;
