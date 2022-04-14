@@ -50,7 +50,8 @@ const DateContainer = styled.div`
 
 const PostTitleContainer = styled.div`
   color: #2D3A54;
-  font-size: 1.6em;
+  font-size: 1.8em;
+  font-family: proxima-nova;
 `;
 
 const PostAuthorContainer = styled.div`
@@ -88,7 +89,7 @@ export function BlogPage(props) {
                       <p>Keith Hug</p>
                     </PostAuthorContainer>
                     <TextContainer>
-                      <p> Nine months ago I started on a new professional journey.  A journey that I have been instrumental in sending many others on over my twenty-one years of work.  I was exited from my corporate role for what was, in the end analysis, a personality conflict. This relationship was, despite best efforts and acknowledged strong job performance, one I couldn’t make work.  As my fifteen-year-old stated when I told him I was out of a job, “epic fail”. </p>
+                      <p>Nine months ago I started on a new professional journey.  A journey that I have been instrumental in sending many others on over my twenty-one years of work.  I was exited from my corporate role for what was, in the end analysis, a personality conflict. This relationship was, despite best efforts and acknowledged strong job performance, one I couldn’t make work.  As my fifteen-year-old stated when I told him I was out of a job, “epic fail”. </p>
                       <p>As a professional who has sat on the other side of the table many times during separation notifications it was while not unexpected, still tough to swallow.  I’ve spent the better part of the last fifteen years building and rebuilding leadership teams so exiting leaders had become a routine part of what I do.  Maybe this was long overdue turnabout, karmic justice for all the employees I’ve played an active role in terminating. </p>
                       <p>Faced with time off in the middle of our short Minnesota summer I did what was completely unnatural, took time off for two months. I had long stretches of time with my wife and children including an unfettered family trip to Michigan to see my extended family without emails, texts, or teleconferences.  It was in a word, fantastic. </p>
                       <p>I also took the opportunity to establish and successfully launch my own LLC.  I am extremely thankful for the opportunities to fill HR leadership gaps and complete critical compensation, job structure, and organizational structure projects. To my four corporate clients, thank you for entrusting me with your important, sensitive work. </p>
