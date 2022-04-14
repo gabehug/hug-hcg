@@ -24,6 +24,8 @@ const Background = styled.div`
 const LeftContainer = styled.div`
   width: 40em;
   height: auto;
+  display: flex;
+  flex-direction: column;
   margin: 2em;
 `;
 
@@ -31,34 +33,34 @@ const TitleContainer = styled.div`
   font-size: 2em;
   color: white;
   text-align: left;
-  margin: 3em 0;
+  margin: 3em 0em -1em 0em;
 `;
 
 const TextContainer = styled.div`
-  color: white;
-  width: 30em;
-  height: auto;
-  font-size: 1.3em;
+  width: 40em;
+  height: 12em;
+  font-size: 1.1em;
   text-align: left;
+  color: white;
 `;
 
 const FormContainer = styled.div`
-  margin: 2em 0;
+  margin: 0em 0;
   width: 100%;
-  height: 300px;
+  height: 400px;
 `;
 
 const RightContainer = styled.div`
   width: 35em;
   height: auto;
-  margin: 2em;
+  margin: 5em;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
 const ImageContainer = styled.div`
-  width: 100%;
+  width: 90%;
   height: auto;
   img {
     width: 100%;

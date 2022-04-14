@@ -6,7 +6,7 @@ import CarouselInfo from "./information";
 
 const WorkContainer = styled.div`
     width: 100%;
-    height: 800px;
+    height: 900px;
     background-size: cover;
 `;
 
@@ -14,26 +14,16 @@ const Background = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
+    justify-content: center;
 `;
 
-const TitleContainer = styled.div`
-    width: 40em;
-    height: auto;
-    margin: 3em;
-    color: white;
-    font-size: 2em;
-    background-color: #393C3E;
-    padding: 1em;
-`;
 
 const TopSectionContainer = styled.div`
     width: 60%;
     height: auto;
     padding: 1em;
-    
+    margin-bottom: 6em;
 `;
 
 // Carousel code for work section  https://react-bootstrap.github.io/components/carousel/
@@ -43,9 +33,6 @@ export function Work(props) {
         <WorkContainer id="work">
             <Marginer direction="vertical" margin={50}/>
             <Background>
-                <TitleContainer>
-                    <h1> What we do</h1>
-                </TitleContainer>
                 <TopSectionContainer>
                     <CarouselInfo />
                 </TopSectionContainer>

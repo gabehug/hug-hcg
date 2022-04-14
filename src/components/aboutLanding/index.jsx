@@ -32,7 +32,7 @@ const CalloutImageContainer = styled.div`
 const TextContainer = styled.div`
     width: 16em;
     color: white;
-    font-size: 2.2em;
+    font-size: 2em;
     text-align: left;
     margin: 0 2em;
 `;

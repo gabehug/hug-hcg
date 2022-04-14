@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const BlogContainer = styled.div`
   width: 100%;
-  height: 800px;
+  height: 750px;
   background-size: cover;
   background-color: #fff;
 `;
@@ -46,8 +46,8 @@ const PostTitleContainer = styled.div`
 const PostTextContainer = styled.div`
   color: white;
   width: 40em;
-  height: auto;
-  font-size: 1.3em;
+  height: 12em;
+  font-size: 1.1em;
 `;
 const ButtonContainer = styled(Link)`
     text-decoration: none;

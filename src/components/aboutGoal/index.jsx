@@ -5,7 +5,7 @@ import goalImg from "../../assets/goalImg.png";
 
 const GoalContainer = styled.div`
     width: 100%;
-    height: 900px;
+    height: 850px;
     background-color: #fff;
     background-size: cover;
 `;
@@ -31,10 +31,18 @@ const TopContainer = styled.div`
 
 const TextContainer = styled.div`
     width: 860px;
-    font-size: 1.5em;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
     text-align: left;
     line-height: 1.5em;
     color: #fff;
+    margin: 2em 0em;
+
+    p {
+        margin: 1em 0em;
+    }
 `;
 
 const ImageContainer = styled.div`

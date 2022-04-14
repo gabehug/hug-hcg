@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const IntroductionContainer = styled.div`
     width: 100%;
-    height: 1000px;
+    height: 900px;
     background-color: #393C3E;
     background-size: cover;
 `;
@@ -34,9 +34,10 @@ const BottomSectionContainer = styled.div`
 `;
 
 const TextContainer = styled.div`
-    width: 800px;
+    width: 42em;
+    height: 15em;
     margin: 0em 0em 1em 8em;
-    font-size: 1.5em;
+    font-size: 1.2em;
     text-align: left;
     line-height: 1.5em;
     color: white;
@@ -54,7 +55,7 @@ const ImageContainer = styled.div`
 
 const ButtonContainer = styled(Link)`
     text-decoration: none;
-    margin: 2em 12em;
+    margin: 0em 12em;
 `;
 
 

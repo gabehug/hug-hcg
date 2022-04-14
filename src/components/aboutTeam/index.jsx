@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const TeamContainer = styled.div`
     width: 100%;
-    height: 1700px;
+    height: 1300px;
     background-color: #fff;
     background-size: cover;
 `;
@@ -30,15 +30,6 @@ const TopContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-`;
-
-const TitleContainer = styled.div`
-    width: 45em;
-    height: auto;
-    margin: 0em 3em 0em 3em;
-    color: white;
-    font-size: 2em;
-    background-color: #393C3E;
 `;
 
 const MiddleContainer = styled.div`
@@ -94,13 +85,17 @@ const NameContainer = styled.div`
 
 const PositionContainer  = styled.div`
     width: 100%;
-    font-size: 1em;
+    font-size: 0.8em;
     text-align: left;
+
+    p {
+        margin: 0;
+    }
 `;
 
 const BottomContainer = styled.div`
     width: 100%;
-    height: 600px;
+    height: 800px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -116,7 +111,7 @@ const BottomImageContainer = styled.div`
     justify-content: center;
 
     img {
-        width: 22em;
+        width: 20em;
         height: auto;
     }
 `;
@@ -143,6 +138,10 @@ const TextContainer = styled.div`
     text-align: left;
     line-height: 2em;
     color: #fff;
+
+    p {
+        margin: 1.5em 0em;
+    }
 `;
 
 const ButtonContainer = styled(Link)`
@@ -155,9 +154,6 @@ export function AboutTeam(props) {
         <TeamContainer>
             <Background>
                 <TopContainer>
-                    <TitleContainer>
-                        <h1>Get to know our team</h1>
-                    </TitleContainer>
                     <MiddleContainer>
                         <LeftContainer>
                             <ImageContainer>

@@ -26,14 +26,14 @@ const LeftContainer = styled.div`
   margin: 4em 5em;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: left;
-  
 `;
 
 const LogoContainer = styled.div`
   width: 200px;
   height: 120px;
+  margin-bottom: -4em;
   img {
       width: 100%;
       height: 100%;
@@ -41,17 +41,21 @@ const LogoContainer = styled.div`
 `; 
 
 const DescriptionContainer = styled.div`
+  height: 3em;
+  width: 100%;
   font-size: 1.1em;
   color: #ACACAC;
   text-align: left;
-  margin: 0em 1.3em;
+  margin: 0em 1em; 
 `;
 
 const CopywriteContainer = styled.div`
-  font-size: 0.8em;
+  height: 1em;
+  width: 100%;
+  font-size: 0.6em;
   color: #ACACAC;
   text-align: left;
-  margin: 7em 1.3em 0em 2em;
+  margin: 18em 0em 0em 1em;
 `;
 
 const RightContainer = styled.div`

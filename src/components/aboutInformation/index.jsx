@@ -6,7 +6,7 @@ import bottomImage from "../../assets/bottomImage.png";
 
 const InformationContainer = styled.div`
     width: 100%;
-    height: 1400px;
+    height: 1350px;
     background-color: #fff;
     background-size: cover;
 `;
@@ -25,16 +25,15 @@ const TopContainer = styled.div`
     height: 500px;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
 `;
 
 const TextContainer = styled.div`
     width: 700px;
-    font-size: 1.5em;
+    font-size: 1.2em;
     text-align: left;
     line-height: 1.5em;
-    margin: 4em;
+    margin: 5em;
 `;
 
 const ImageContainer = styled.div`
@@ -86,12 +85,12 @@ const TitleContainer = styled.div`
     color: #2D3A54;
     font-size: 2.2em;
     text-align: left;
-    margin: 0em 0em -2em 0em;
+    margin: 5em 0em -2em 0em;
 `;
 
 const AltTextContainer = styled.div`
     width: 700px;
-    font-size: 1.5em;
+    font-size: 1.2em;
     text-align: left;
     line-height: 1.5em;
     margin: 2em 0em;

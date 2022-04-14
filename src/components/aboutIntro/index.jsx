@@ -5,7 +5,7 @@ import { Marginer } from "../marginer";
 
 const IntroductionContainer = styled.div`
     width: 100%;
-    height: 1000px;
+    height: 900px;
     background-color: #2D3A54;
     background-size: cover;
 `;
@@ -24,7 +24,6 @@ const ImageContainer = styled.div`
     height: 17em;
     margin: 4em;
 
-
     img {
         width: 100%;
         height: 100%;
@@ -36,7 +35,6 @@ const RightSectionContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    margin-bottom: 10em;
 `;
 
 const TitleContainer = styled.div`
@@ -49,7 +47,7 @@ const TitleContainer = styled.div`
 
 const TextContainer = styled.div`
     width: 800px;
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin: 0;
     text-align: left;
     line-height: 1.5em;
@@ -72,7 +70,7 @@ export function AboutIntro(props) {
                         <p>Keith Hug was introduced to merger and acquisition 
 work while at Medtronic Plc, a global leader in medical 
 technology-alleviating pain, restoring health, and extending 
-life for millions of people around the world. Enthralled to this 
+life for millions of people around the world.Enthralled to this 
 day with Medtronic’s origin story and founder-written mission 
 statement, he carries the desire to have a positive impact on 
                         all stakeholders, clients, employees, the environment, and shareholders.</p>

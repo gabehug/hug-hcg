@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import welcomeImg from "../../assets/welcomeImg.svg";
+import scrollIndicator from "../../assets/scrollIndi.png";
+import { Marginer } from "../marginer";
 
 
 const LandingPageContainer = styled.div`
@@ -14,9 +16,16 @@ const Background = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+`;
+
+const TopContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 7em;
 `;
 
 const CalloutImageContainer = styled.div`
@@ -39,18 +48,32 @@ const TextContainer = styled.div`
     margin: 0 2em;
 `;
 
-
+const ScrollContainer = styled.div`
+    width: auto;
+    height: 2em;
+    
+    img {
+        width: 100%;
+        height: 100%;
+    }
+`;
 
 export function LandingPage(props) {
     return (
         <LandingPageContainer>
             <Background>
-                <CalloutImageContainer>
-                    <img src= {welcomeImg} alt="img" />
-                </CalloutImageContainer>
-                <TextContainer>
-                    <h1>Looking for help with an upcoming transition in your business?</h1>
-                </TextContainer>
+                <TopContainer>
+                    <CalloutImageContainer>
+                        <img src= {welcomeImg} alt="img" />
+                    </CalloutImageContainer>
+                    <TextContainer>
+                        <h1>Looking for help with an upcoming transition in your business?</h1>
+                    </TextContainer>
+                </TopContainer>
+                <Marginer direction="vertical" margin={200}/>
+                <ScrollContainer>
+                    <img src= {scrollIndicator} alt="scroll.png" />
+                </ScrollContainer>
             </Background>
         </LandingPageContainer>
     )

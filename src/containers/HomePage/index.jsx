@@ -29,9 +29,8 @@ export function HomePage(props) {
                 <Navbar/>
                 <Marginer direction="vertical" margin={100}/>
                 <LandingPage/>
-                <Introduction />
                 <Work />
-                <Marginer direction="vertical" margin={350}/>
+                <Introduction />
                 <Scheduling />
                 <Marginer direction="vertical" margin={50}/>
                 <Quote />

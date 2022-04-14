@@ -6,7 +6,7 @@ import workBackground from "../../assets/workBackground.png";
 const CarouselInfo = () => {
     return (
         <Carousel variant="dark">
-            <Carousel.Item interval={10000}>
+            <Carousel.Item interval={5000}>
                 <img
                 className="d-block w-100"
                 src= {workBackground}
@@ -17,7 +17,7 @@ const CarouselInfo = () => {
                 <p>We provide interim senior level Human Resource leadership.  Our entire team has expertise in Human Capital Management (HCM), the comprehensive set of an organization’s practices for recruiting, managing, developing, and optimizing employees (as an intangible asset) in order to maximize their business value.</p>
                 </Carousel.Caption>
             </Carousel.Item >
-            <Carousel.Item interval={10000}>
+            <Carousel.Item interval={5000}>
                 <img
                 className="d-block w-100"
                 src= {workBackground}
@@ -29,7 +29,7 @@ const CarouselInfo = () => {
                 <p>As transition management specialists, we’ll assist you in executing the program management of strategic actions across your company, including senior management transitions, acquisition integrations, divestiture separations, and other portfolio management actions.</p>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item interval={10000}>
+            <Carousel.Item interval={5000}>
                 <img
                 className="d-block w-100"
                 src= {workBackground}

@@ -20,8 +20,9 @@ export function Blog(props) {
         <PageContainer>
             <Background>
                 <Navbar/>
+                <Marginer direction="vertical" margin={150}/>
                 <BlogPage />
-                <Marginer direction="vertical" margin={200}/>
+                <Marginer direction="vertical" margin={100}/>
                 <Footer />
             </Background>
         </PageContainer>

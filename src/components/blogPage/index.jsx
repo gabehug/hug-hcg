@@ -5,7 +5,7 @@ import { Button } from "../button";
 
 const BlogContainer = styled.div`
   width: 100%;
-  height: 1600px;
+  height: 1800px;
   background-size: cover;
   background-color: #fff;
 `;
@@ -14,7 +14,8 @@ const Background = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column
+  flex-direction: column;
+  align-items: center;
 `;
 
 
@@ -22,9 +23,9 @@ const PostsContainer = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  margin-top: -3.5em;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 `;
 
 
@@ -44,7 +45,7 @@ const BlogPostContainer = styled.button`
 
 const DateContainer = styled.div`
   color: #393C3E;
-  font-size: 1.4em;
+  font-size: 1.2em;
   margin-top: 6em;
 `;
 
@@ -55,22 +56,25 @@ const PostTitleContainer = styled.div`
 `;
 
 const PostAuthorContainer = styled.div`
-  color: #2D3A5;
   width: 30em;
-  height: auto;
-  font-size: 1.5em;
+  height: 1em;
+
+  p {
+    margin: 1em;
+    color: #2D3A5;
+  }
 `;
 
 const TextContainer = styled.div`
-  width: 36em;
+  width: 45em;
   height: auto;
-  font-size: 1.5em;
+  font-size: 1.2em;
   text-align: left;
   color: #393C3E;
-  margin: 3em 2em 2em 2em;
+  margin: 4em 2em 2em 2em;
   
   p {
-    margin-bottom: 1.2em;
+    margin: 1em 0em;
   }
 `;
 
@@ -78,7 +82,7 @@ export function BlogPage(props) {
     return (
         <BlogContainer>
             <Background>
-              <Marginer direction="vertical" margin={300}/>
+              
                 <PostsContainer>
                   <BlogPostContainer>
                     <DateContainer> 3/11/19 </DateContainer>
