@@ -36,51 +36,6 @@ const TopSectionContainer = styled.div`
     
 `;
 
-const CardContainer = styled.div`
-    width: 25em;
-    height: 30em;
-    border-radius: 0px;
-    display: flex; 
-    flex-direction: column;
-    margin: 1.5em;
-    align-items: center;
-    justify-content: center;
-    background-color: #2D3A54;
-    transition: 0.5s ease-in-out;
-
-    : hover {
-        border: 1px solid white;
-        background-color: white;
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    }
-`;
-
-const CardTitle = styled.div`
-    width: 16em;
-    height: 0em;
-    color: white ;
-    font-size: 1.2em;
-    align-items: center;
-    justify-content: center;
-    margin: 8em 1em -10em 1em;
-`;
-
-const CardText = styled.div`
-    width: auto;
-    height: 20em;
-    font-size: 1.2em;
-    color: transparent;
-    text-align: center;
-    padding: 8em 2em 2em 2em;
-    transition: 0.5s ease-in-out;
-    
-    : hover {
-        font-size: 1.2em;
-        color: #2D3A54;
-    }
-`;
-
-
 // Carousel code for work section  https://react-bootstrap.github.io/components/carousel/
 
 export function Work(props) {

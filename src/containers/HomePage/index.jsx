@@ -31,7 +31,7 @@ export function HomePage(props) {
                 <LandingPage/>
                 <Introduction />
                 <Work />
-                <Marginer direction="vertical" margin={300}/>
+                <Marginer direction="vertical" margin={350}/>
                 <Scheduling />
                 <Marginer direction="vertical" margin={50}/>
                 <Quote />
