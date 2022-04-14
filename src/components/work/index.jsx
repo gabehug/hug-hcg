@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Marginer } from "../../components/marginer";
 import { Parallax } from "react-scroll-parallax";
+import CarouselInfo from "./information";
 
 const WorkContainer = styled.div`
     width: 100%;
@@ -19,21 +20,20 @@ const Background = styled.div`
 `;
 
 const TitleContainer = styled.div`
-    width: 45em;
+    width: 40em;
     height: auto;
     margin: 3em;
     color: white;
     font-size: 2em;
     background-color: #393C3E;
+    padding: 1em;
 `;
 
 const TopSectionContainer = styled.div`
-    width: 80%;
+    width: 60%;
     height: auto;
     padding: 1em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    
 `;
 
 const CardContainer = styled.div`
@@ -80,6 +80,7 @@ const CardText = styled.div`
     }
 `;
 
+
 // Carousel code for work section  https://react-bootstrap.github.io/components/carousel/
 
 export function Work(props) {
@@ -91,8 +92,7 @@ export function Work(props) {
                     <h1> What we do</h1>
                 </TitleContainer>
                 <TopSectionContainer>
-                    
-
+                    <CarouselInfo />
                 </TopSectionContainer>
             </Background>
         </WorkContainer>
