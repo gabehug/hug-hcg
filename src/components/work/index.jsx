@@ -26,6 +26,7 @@ const TopSectionContainer = styled.div`
     margin-bottom: 6em;
 `;
 
+
 // Carousel code for work section  https://react-bootstrap.github.io/components/carousel/
 
 export function Work(props) {

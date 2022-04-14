@@ -28,19 +28,22 @@ const TopSectionContainer = styled.div`
 `;
 
 const BottomSectionContainer = styled.div`
-    display:flex;
+    display: flex;
     flex-direction: row;
-    justify-content: center;
 `;
 
 const TextContainer = styled.div`
     width: 42em;
     height: 15em;
-    margin: 0em 0em 1em 8em;
+    margin: 0em 0em 0em 10em;
     font-size: 1.2em;
     text-align: left;
     line-height: 1.5em;
     color: white;
+
+    p {
+        margin: 0;
+    }
 `;
 
 const ImageContainer = styled.div`
@@ -48,8 +51,8 @@ const ImageContainer = styled.div`
     height: 22em;
     margin: -5em 6em;
     img {
-        width: 100%;
-        height: 100%;
+        width: 80%;
+        height: auto;
     }
 `;
 
