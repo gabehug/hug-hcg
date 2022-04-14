@@ -174,6 +174,7 @@ export function AboutTeam(props) {
                         </RightContainer>
                     </MiddleContainer>
                 </TopContainer>
+                <Marginer direction="vertical" margin={100}/>
                 <BottomContainer>
                     <LeftContainer>
                         <BottomImageContainer>
@@ -186,7 +187,7 @@ export function AboutTeam(props) {
                         </BottomTitleContainer>
                         <TextContainer>
                                 <p>Take a look at our blog for more about Keith, Hug Human 
-    Capital Group, and more!</p>       
+    Capital Group, and more!</p>
                         </TextContainer>
                         <ButtonContainer to="/blog">
                             <Button>Click here</Button>

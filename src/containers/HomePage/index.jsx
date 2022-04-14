@@ -33,6 +33,7 @@ export function HomePage(props) {
                 <Work />
                 <Marginer direction="vertical" margin={300}/>
                 <Scheduling />
+                <Marginer direction="vertical" margin={50}/>
                 <Quote />
                 <Marginer direction="vertical" margin={100}/>
                 <Blog />
