@@ -5,6 +5,8 @@ import styled from "styled-components";
 import { Button } from "../button";
 import * as Yup from "yup"; 
 import emailjs from "emailjs-com";
+import { useMediaQuery } from "react-responsive";
+import { deviceSize } from "../responsive";
 
 const Background = styled.div`
     width: 100%;
@@ -76,6 +78,10 @@ const MessageContainer  = styled.div`
         color: red;
         font-size: 0.75em;
         text-align: left;
+    }
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        width: 100%;
     }
 `;
 

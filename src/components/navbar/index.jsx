@@ -4,7 +4,7 @@ import hugHCGLogo from "../../assets/hugHCGLogo";
 import { PageContainer } from "../../components/pageContainer";
 import { Marginer } from "../../components/marginer";
 import { useMediaQuery } from "react-responsive";
-import { DeviceSize } from "../responsive";
+import { deviceSize } from "../responsive";
 import { MobileNavbar } from "./mobileNavLinks";
 import { NavLinks } from "./navLinks";
 import { SocialLinks } from "./socialLinks";
@@ -25,6 +25,10 @@ const NavbarContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        width: 100vw;
+    }
 `;
 
 const LeftContainer = styled.div`

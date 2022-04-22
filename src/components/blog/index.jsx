@@ -3,12 +3,15 @@ import styled from "styled-components";
 import { Marginer } from "../../components/marginer";
 import { Button } from "../button";
 import { Link } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
+import { deviceSize } from "../responsive";
 
 const BlogContainer = styled.div`
   width: 100%;
   height: 750px;
   background-size: cover;
   background-color: #fff;
+
 `;
 
 const Background = styled.div`
@@ -30,17 +33,30 @@ const BlogPostContainer = styled.div`
   height: 600px;
   background-color: #393C3E;
   border-radius: 20px;
+
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    width: 80%;
+  }
 `;
 
 const DateContainer = styled.div`
   color: white;
   font-size: 1.5em;
   margin-bottom: 1em;
+
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    font-size: 1em;
+  }
 `;
 
 const PostTitleContainer = styled.div`
   color: white;
   font-size: 1.7em;
+
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    font-size: 1.2em;
+    width: 12em;
+  }
 `;
 
 const PostTextContainer = styled.div`
@@ -48,10 +64,21 @@ const PostTextContainer = styled.div`
   width: 40em;
   height: 12em;
   font-size: 1.1em;
+
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    font-size: 0.8em;
+    width: 20em;
+    height: 22em;;
+  }
 `;
+
 const ButtonContainer = styled(Link)`
     text-decoration: none;
     margin-top: 3em;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      margin: 0em;
+    }
 `;
 
 

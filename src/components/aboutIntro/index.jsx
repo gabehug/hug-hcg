@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import aboutIntro from "../../assets/aboutIntro.png";
 import { Marginer } from "../marginer";
+import { useMediaQuery } from "react-responsive";
+import { deviceSize } from "../responsive";
+
 
 const IntroductionContainer = styled.div`
     width: 100%;
@@ -31,10 +34,14 @@ const ImageContainer = styled.div`
 `;
 
 const RightSectionContainer = styled.div`
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        width: 100%;
+    }
 `;
 
 const TitleContainer = styled.div`
@@ -43,6 +50,11 @@ const TitleContainer = styled.div`
     font-size: 2.2em;
     text-align: left;
     margin: 2em 0em 0em 0em;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        font-size: 1.2em;
+        margin: 2em 0em -2em 2em;
+    }
 `;
 
 const TextContainer = styled.div`
@@ -52,16 +64,27 @@ const TextContainer = styled.div`
     text-align: left;
     line-height: 1.5em;
     color: white;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        font-size: 1em;
+        width: 20em;
+        height: 25em;
+        margin: 0em 0em 0em 2em;
+    }
 `;
 
 export function AboutIntro(props) {
+    const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
+
     return (
         <IntroductionContainer>
             <Background>
+                {!isMobile && (
                 <ImageContainer>
                     <img src= {aboutIntro} alt="img" />
                 </ImageContainer>
-                <Marginer direction="horizontal" margin={200} />
+                )}
+                <Marginer direction="horizontal" margin={isMobile ? 0 : 200} />
                 <RightSectionContainer>
                     <TitleContainer>
                         <h1>Who are we?</h1>

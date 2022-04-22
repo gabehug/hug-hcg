@@ -4,12 +4,18 @@ import styled from "styled-components";
 import { Marginer } from "../../components/marginer";
 import linkedIn from "../../assets/linkedIn.png";
 import { Logo } from "../logo";
+import { useMediaQuery } from "react-responsive";
+import { deviceSize } from "../responsive";
 
 const FooterContainer = styled.div`
     width: 100%;
     height: 450px;
     background-color: #272829;
     background-size: cover;
+    
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      height: 370px;
+    }
 `;
 
 const Background = styled.div`
@@ -18,6 +24,10 @@ const Background = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      flex-direction: column;
+    }
 `;
 
 const LeftContainer = styled.div`
@@ -28,6 +38,11 @@ const LeftContainer = styled.div`
   flex-direction: column;
   justify-content: start;
   align-items: left;
+
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    margin: 2em 0em;
+    width: 20em;
+  } 
 `;
 
 const LogoContainer = styled.div`
@@ -38,6 +53,11 @@ const LogoContainer = styled.div`
       width: 100%;
       height: 100%;
   }
+
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    height: 6em;
+    margin: 0em 0em -4em 0.5em;
+}
 `; 
 
 const DescriptionContainer = styled.div`
@@ -47,6 +67,13 @@ const DescriptionContainer = styled.div`
   color: #ACACAC;
   text-align: left;
   margin: 0em 1em; 
+
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    width: 22em;
+    height: 10em;
+    font-size: 0.85em;
+    margin: 0em 2em;
+}
 `;
 
 const CopywriteContainer = styled.div`
@@ -56,6 +83,10 @@ const CopywriteContainer = styled.div`
   color: #ACACAC;
   text-align: left;
   margin: 18em 0em 0em 1em;
+
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    margin: 0em 2em;
+  }
 `;
 
 const RightContainer = styled.div`
@@ -67,6 +98,11 @@ const RightContainer = styled.div`
   justify-content: space-evenly;
   align-items: left;
   
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    margin: 0em;
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 const ListContainer = styled.div`
@@ -80,22 +116,36 @@ const ListTitle = styled.div`
   font-weight: 200;
   color: #fff;
   text-align: left;
-  margin: 2em;
+  
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    font-size: 0.75em;
+    margin: 2em 2em 0em 2em;
+  }
+
 `;
 
 const ListItemsContainer = styled.div`
   width: auto;
   height: auto;
+
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    line-height: 1em;
+    margin: 0em;
+  }
 `;
 
 const ImgContainer = styled.div`
-  width: 3.4em;
+  width: 1.5em;
   height: auto;
   margin-left: 0.2em;
   img {
     width: 100%;
     height: 100%;
   }
+
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    width: 3.2em;
+}
 `;
 
 const LinkItem = styled.div`
@@ -104,7 +154,7 @@ const LinkItem = styled.div`
   font-weight: 200;
   color: #ACACAC;
   text-align: left;
-  margin: 1em 0 1em 2em;
+  margin: 1em 0 1em 0em;
   text-decoration: none;
   
   &: hover {
@@ -116,12 +166,19 @@ const LinkItem = styled.div`
     text-decoration: none;
     color: inherit;
   }
+
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    line-height: 1em;
+    margin: 0.5em 0em 0em 2em;
+  }
 `;
 
 export function Footer(props) {
+  const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
     return (
         <FooterContainer>
             <Background>
+
               <LeftContainer>
                 <LogoContainer>
                   <Logo />
@@ -129,12 +186,15 @@ export function Footer(props) {
                 <DescriptionContainer>
                   <p>We believe that what what makes any organization or business thrive is the passion, engagement, and alignment of employees, the human capital.  </p>
                 </DescriptionContainer>
+                {!isMobile && (
                 <CopywriteContainer>
                   <p>©2021 Hug Human Capital Group. All Rights Reserved.</p>
                 </CopywriteContainer>
+                )}
               </LeftContainer>
               <Marginer direction="horizontal" margin={60} />
               <RightContainer>
+              {!isMobile && (
                 <ListContainer>
                   <ListTitle>
                     <h1>Explore</h1>
@@ -146,6 +206,8 @@ export function Footer(props) {
                     <LinkItem><a href="/blog">Blog</a></LinkItem>
                   </ListItemsContainer>
                 </ListContainer>
+              )}
+                {!isMobile && (
                 <ListContainer>
                   <ListTitle>
                     <h1>Contact Us</h1>
@@ -158,11 +220,17 @@ export function Footer(props) {
                     </ImgContainer>
                   </ListItemsContainer>
                 </ListContainer>
+              )}
                 <ListContainer>
                   <ListTitle>
                     <h1>Employee Portal</h1>
                   </ListTitle>
                 </ListContainer>
+                {isMobile && ( 
+                <CopywriteContainer>
+                  <p>©2021 Hug Human Capital Group. All Rights Reserved.</p>
+                </CopywriteContainer>
+                )}
               </RightContainer>
             </Background>
         </FooterContainer>

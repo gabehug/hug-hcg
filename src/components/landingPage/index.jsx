@@ -3,6 +3,8 @@ import styled from "styled-components";
 import welcomeImg from "../../assets/welcomeImg.svg";
 import scrollIndicator from "../../assets/scrollIndi.png";
 import { Marginer } from "../marginer";
+import { useMediaQuery } from "react-responsive";
+import { deviceSize } from "../responsive";
 
 
 const LandingPageContainer = styled.div`
@@ -10,6 +12,10 @@ const LandingPageContainer = styled.div`
     height: 900px;
     background-color: #2D3A54;
     background-size: cover;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        height: 800px;
+    }
 `;
 
 const Background = styled.div`
@@ -26,6 +32,11 @@ const TopContainer = styled.div`
     flex-direction: row;
     align-items: center;
     margin-top: 7em;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        margin-top: 0em;
+        
+    }
 `;
 
 const CalloutImageContainer = styled.div`
@@ -46,6 +57,11 @@ const TextContainer = styled.div`
     font-size: 2.2em;
     text-align: left;
     margin: 0 2em;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        font-size: 1.2em;
+        
+    }
 `;
 
 const ScrollContainer = styled.div`
@@ -59,13 +75,17 @@ const ScrollContainer = styled.div`
 `;
 
 export function LandingPage(props) {
+    const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
+
     return (
         <LandingPageContainer>
             <Background>
                 <TopContainer>
+                    {!isMobile && (
                     <CalloutImageContainer>
                         <img src= {welcomeImg} alt="img" />
                     </CalloutImageContainer>
+                    )}
                     <TextContainer>
                         <h1>Looking for help with an upcoming transition in your business?</h1>
                     </TextContainer>

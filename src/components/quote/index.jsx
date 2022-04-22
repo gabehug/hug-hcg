@@ -2,11 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import { Marginer } from "../../components/marginer";
 import quoteIMG  from "../../assets/quoteIMG.png";
+import { useMediaQuery } from "react-responsive";
+import { deviceSize } from "../responsive";
 
 const QuoteContainer = styled.div`
     width: 100%;
     height: 350px;
     background-size: cover;
+    
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      height: 100%;
+  }
 `;
 
 const Background = styled.div`
@@ -17,6 +23,10 @@ const Background = styled.div`
     align-items: center;
     justify-content: space-evenly;
     background-color: #fff;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      flex-direction: column;
+  }
     
 `;
 
@@ -32,6 +42,11 @@ const CalloutImageContainer = styled.div`
     width: 100%;
     height: 100%;
   }
+
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    width: 50%;
+    height: 50%;
+}
 `;
 
 const QuoteText = styled.div`
@@ -41,6 +56,11 @@ const QuoteText = styled.div`
   text-align: left;
   line-height: 2em;
   color: #393c3f;
+
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    font-size: 1.02em;
+    width: 16em;
+}
 `;
 
 export function Quote(props) {

@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Marginer } from "../../components/marginer";
-import { Button } from "../button";
+import { useMediaQuery } from "react-responsive";
+import { deviceSize } from "../responsive";
 
 const BlogContainer = styled.div`
   width: 100%;
   height: 1800px;
   background-size: cover;
   background-color: #fff;
+
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    height: 100%;
+}
 `;
 
 const Background = styled.div`
@@ -40,6 +45,11 @@ const BlogPostContainer = styled.button`
   border-radius: 20px;
   border: 1px solid white;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    width: 95%;
+    height: 100%;
+  }
 }
 `;
 
@@ -47,12 +57,21 @@ const DateContainer = styled.div`
   color: #393C3E;
   font-size: 1.2em;
   margin-top: 6em;
+
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    margin: 4em 0em 1em 0em;
+}
 `;
 
 const PostTitleContainer = styled.div`
   color: #2D3A54;
   font-size: 1.8em;
   font-family: proxima-nova;
+
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    font-size: 1.2em;
+    width: 16em;
+  }
 `;
 
 const PostAuthorContainer = styled.div`
@@ -76,13 +95,17 @@ const TextContainer = styled.div`
   p {
     margin: 1em 0em;
   }
+
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    font-size: 1em;
+    width: 20em;
+}
 `;
 
 export function BlogPage(props) {
     return (
         <BlogContainer>
             <Background>
-              
                 <PostsContainer>
                   <BlogPostContainer>
                     <DateContainer> 3/11/19 </DateContainer>

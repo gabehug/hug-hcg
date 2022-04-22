@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { Marginer } from "../marginer";
 import topImage from "../../assets/topImage.png";
 import bottomImage from "../../assets/bottomImage.png";
+import { useMediaQuery } from "react-responsive";
+import { deviceSize } from "../responsive";
 
 const InformationContainer = styled.div`
     width: 100%;
@@ -26,6 +28,10 @@ const TopContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        height: 400px;
+    }
 `;
 
 const TextContainer = styled.div`
@@ -34,6 +40,12 @@ const TextContainer = styled.div`
     text-align: left;
     line-height: 1.5em;
     margin: 5em;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        width: 100%;
+        font-size: 1em;
+        margin: 2em;
+    }
 `;
 
 const ImageContainer = styled.div`
@@ -57,6 +69,11 @@ const BottomContainer = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        flex-direction: column;
+        height: 100%;
+    }
 `;
 
 const BottomImageContainer = styled.div`
@@ -71,6 +88,13 @@ const BottomImageContainer = styled.div`
         width: 26em;
         height: 18 em;
     }
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        img {
+            width: 20em;
+            height: auto;
+        }
+    }
 `;
 
 const RightContainer = styled.div`
@@ -78,6 +102,10 @@ const RightContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        width: 100%;
+    }
 `;
 
 const TitleContainer = styled.div`
@@ -86,6 +114,11 @@ const TitleContainer = styled.div`
     font-size: 2.2em;
     text-align: left;
     margin: 5em 0em -2em 0em;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        font-size: 1.2em;
+        margin: 0em 0em -2em 3em;
+    }
 `;
 
 const AltTextContainer = styled.div`
@@ -94,9 +127,16 @@ const AltTextContainer = styled.div`
     text-align: left;
     line-height: 1.5em;
     margin: 2em 0em;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        width: 20em;
+        font-size: 1em;
+        margin: 0em 2em;
+    }
 `;
 
 export function AboutInformation(props) {
+    const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
     return (
         <InformationContainer>
             <Background>
@@ -109,9 +149,11 @@ He believes that what what makes any organization
 or business thrive is the passion, engagement, and 
 alignment of employees, the human capital.  </p>
                     </TextContainer>
+                    {!isMobile && (
                     <ImageContainer>
                     <img src= {topImage} alt="img" />
                     </ImageContainer>
+                    )}
                 </TopContainer>
                 <BottomContainer>
                     <BottomImageContainer>

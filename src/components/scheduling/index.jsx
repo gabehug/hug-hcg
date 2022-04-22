@@ -2,12 +2,18 @@ import React from "react";
 import styled from "styled-components";
 import { Marginer } from "../../components/marginer";
 import { InlineWidget } from "react-calendly";
+import { useMediaQuery } from "react-responsive";
+import { deviceSize } from "../responsive";
 
 const SchedulingContainer = styled.div`
     width: 100%;
     height: 1000px;
     background-size: cover;
     background-color: #2D3A54;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        height: 100%;
+    }
 `;
 
 const Background = styled.div`
@@ -25,11 +31,21 @@ const TitleContainer = styled.div`
     margin: 3em 2em 0em 2em;
     color: white;
     font-size: 2em;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        font-size: 1em;
+        margin: 4em 2em 0em 2em;
+    }
 `;
 
 const WidgetContainer = styled.div`
     height: 100%;
     width: 100%;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        width: 20em;
+        margin: 2em;
+    }
 `;
 
 

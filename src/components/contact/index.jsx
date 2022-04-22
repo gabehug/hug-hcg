@@ -4,6 +4,8 @@ import { Marginer } from "../../components/marginer";
 import { Button } from "../button";
 import contactIMG from "../../assets/contactIMG.png";
 import { ContactForm } from "../contactForm";
+import { useMediaQuery } from "react-responsive";
+import { deviceSize } from "../responsive";
 
 
 const ContactContainer = styled.div`
@@ -11,6 +13,10 @@ const ContactContainer = styled.div`
     height: 1000px;
     background-color: #2D3A54;
     background-size: cover;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+      height: 800px;
+    }
 `;
 
 const Background = styled.div`
@@ -27,6 +33,11 @@ const LeftContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 2em;
+
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    width: 100%;
+    margin: 0em;
+  }
 `;
 
 const TitleContainer = styled.div`
@@ -34,6 +45,12 @@ const TitleContainer = styled.div`
   color: white;
   text-align: left;
   margin: 3em 0em -1em 0em;
+
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    font-size: 1.2em;
+    margin: 3em 2em 0em 2em;
+    height: 0em;
+  }
 `;
 
 const TextContainer = styled.div`
@@ -42,12 +59,24 @@ const TextContainer = styled.div`
   font-size: 1.1em;
   text-align: left;
   color: white;
+
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    font-size: 1em;
+    width: 20em;
+    height: 16em;
+    margin: 0em 0em 0em 2em;
+  }
 `;
 
 const FormContainer = styled.div`
-  margin: 0em 0;
+  margin: 0em;
   width: 100%;
   height: 400px;
+
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    width: 20em;
+    margin: 0em 0em 0em 2em;
+  }
 `;
 
 const RightContainer = styled.div`
@@ -71,6 +100,8 @@ const ImageContainer = styled.div`
 
 
 export function Contact(props) {
+  const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
+
     return (
         <ContactContainer id="contact">
             <Background>
@@ -85,12 +116,14 @@ export function Contact(props) {
                     <ContactForm />
                   </FormContainer>
                 </LeftContainer>
-                <Marginer direction="horizontal" margin={100} />
+                <Marginer direction="horizontal" margin={isMobile ? 0 : 100} />
+                {!isMobile && ( 
                 <RightContainer>
                   <ImageContainer>
                     <img src= {contactIMG} alt="img" />
                   </ImageContainer>
                 </RightContainer>
+                )}
             </Background>
         </ContactContainer>
     )

@@ -6,6 +6,8 @@ import teamGraphic from "../../assets/teamGraphic.png";
 import keith from "../../assets/keith.png";
 import { Button } from "../button";
 import { Link } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
+import { deviceSize } from "../responsive";
 
 const TeamContainer = styled.div`
     width: 100%;
@@ -40,6 +42,10 @@ const MiddleContainer = styled.div`
     justify-content: center;
     align-items: center;
     font-size: 1.5em;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        flex-direction: column;
+    }
 `;
 
 const LeftContainer = styled.div`
@@ -48,6 +54,7 @@ const LeftContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    }
 `;
 
 const ImageContainer = styled.div`
@@ -61,8 +68,12 @@ const ImageContainer = styled.div`
         width: 13em;
         height: auto;
         border-radius: 10px;
+    }
 
-        
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        img {
+            width: 10em;
+        }
     }
 `;
 
@@ -73,6 +84,10 @@ const RightContainer = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        width: 100%;
+    }
 `;
 
 const NameContainer = styled.div`
@@ -81,6 +96,11 @@ const NameContainer = styled.div`
     text-align: left;
     line-height: 0em;
     color: #2D3A54;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        font-size: 1.2em;
+        text-align: center;
+    }
 `;
 
 const PositionContainer  = styled.div`
@@ -90,6 +110,11 @@ const PositionContainer  = styled.div`
 
     p {
         margin: 0;
+    }
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        font-size: 0.75em;
+        text-align: center;
     }
 `;
 
@@ -123,6 +148,10 @@ const BottomRightContainer = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        width: 100%;
+    }
 `;
 
 const BottomTitleContainer = styled.div`
@@ -130,6 +159,11 @@ const BottomTitleContainer = styled.div`
     color: #fff;
     font-size: 2.2em;
     text-align: left;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        font-size: 1.2em;
+        margin: 0em 2em;
+    }
 `;
 
 const TextContainer = styled.div`
@@ -142,14 +176,26 @@ const TextContainer = styled.div`
     p {
         margin: 1.5em 0em;
     }
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        font-size: 1em;
+        width: 20em;
+        margin: 0em 2em;
+    }
 `;
 
 const ButtonContainer = styled(Link)`
     margin-top: 1.5em;
     text-decoration: none;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        margin: 0em 2em;
+    }
 `;
 
 export function AboutTeam(props) {
+    const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
+
     return (
         <TeamContainer>
             <Background>
@@ -172,11 +218,13 @@ export function AboutTeam(props) {
                 </TopContainer>
                 <Marginer direction="vertical" margin={100}/>
                 <BottomContainer>
+                    {!isMobile && (
                     <LeftContainer>
                         <BottomImageContainer>
                             <img src= {teamGraphic} alt="img" />
                         </BottomImageContainer>
                     </LeftContainer>
+                    )}
                     <BottomRightContainer>
                         <BottomTitleContainer>
                             <h1>Want to learn more?</h1>
