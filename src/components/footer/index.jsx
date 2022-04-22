@@ -140,10 +140,10 @@ export function Footer(props) {
                     <h1>Explore</h1>
                   </ListTitle>
                   <ListItemsContainer>
-                    <LinkItem><a href="/#about">About</a></LinkItem>
+                    <LinkItem><a href="/#aboutLink">About</a></LinkItem>
                     <LinkItem><a href="/#work">Areas of Practice</a></LinkItem>
                     <LinkItem><a href="/#scheduling">Book an Appointment</a></LinkItem>
-                    <LinkItem><a href="/#blog">Blog</a></LinkItem>
+                    <LinkItem><a href="/blog">Blog</a></LinkItem>
                   </ListItemsContainer>
                 </ListContainer>
                 <ListContainer>
@@ -152,7 +152,7 @@ export function Footer(props) {
                   </ListTitle>
                   <ListItemsContainer>
                     <LinkItem><a href="tel:6513292875">(651) 329-2875</a></LinkItem>
-                    <LinkItem><a href="mailto: hug.humancapitalgroup@gmail.com">Email us</a></LinkItem>
+                    <LinkItem><a href="mailto: hug.humancapitalgroup@gmail.com" target="_blank">Email us</a></LinkItem>
                     <ImgContainer>
                       <LinkItem><a href="https://www.linkedin.com/in/keith-hug-2a7905/" target="_blank"> <img src= {linkedIn} alt="linkedinLogo"></img></a></LinkItem>
                     </ImgContainer>
