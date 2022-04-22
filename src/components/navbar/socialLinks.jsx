@@ -14,9 +14,8 @@ const Link = styled.a`
     font-size: inherit;
 
     img {
-        height: 1.2em;
+        height: 1.5em;
         width: auto;
-        padding: 1.5em 0em;
         border-top: 2px solid transparent;
         transition: all 300ms ease-in-out;
 

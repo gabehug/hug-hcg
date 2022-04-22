@@ -5,11 +5,11 @@ import { PageContainer } from "../../components/pageContainer";
 import { Marginer } from "../../components/marginer";
 import { useMediaQuery } from "react-responsive";
 import { deviceSize } from "../responsive";
-import { MobileNavbar } from "./mobileNavLinks";
 import { NavLinks } from "./navLinks";
 import { SocialLinks } from "./socialLinks";
 import { Link } from "react-router-dom";
 import { Logo } from "../logo";
+import { Menu } from "../menu";
 
 
 const NavbarContainer = styled.div`
@@ -35,6 +35,10 @@ const LeftContainer = styled.div`
     display: flex;
     align-self: center;
     margin-left: 1em;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        margin: 0;
+    }
 `;
 
 const LogoContainer = styled.div`
@@ -56,23 +60,32 @@ const MiddleContainer = styled.div`
 `;
 
 const RightContainer = styled.div`
-    width: 10em;
+    width: 4em;
     height: auto;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        width: 2em;
+    }
 `;
 
+//Need to put mobileNav import where social links currently is.
+
 export function Navbar(props) {
-    
+    const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
     return (
         <PageContainer> 
             <NavbarContainer> 
                 <LeftContainer>
                     <Logo />
                 </LeftContainer>
+                {!isMobile && ( 
                 <MiddleContainer>
                     <NavLinks />
                 </MiddleContainer>
+                )}
                 <RightContainer>
-                    <SocialLinks />
+                    {!isMobile && ( <SocialLinks /> )}
+                    {isMobile && ( <Menu />)}
                 </RightContainer>
             </NavbarContainer>
         </PageContainer>
