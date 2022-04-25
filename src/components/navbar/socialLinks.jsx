@@ -16,12 +16,6 @@ const Link = styled.a`
     img {
         height: 1.5em;
         width: auto;
-        border-top: 2px solid transparent;
-        transition: all 300ms ease-in-out;
-
-        :hover {
-            border-top: 2px solid #8194AD;
-        }
     }
 `;
 

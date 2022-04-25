@@ -116,6 +116,7 @@ const ListTitle = styled.div`
   font-weight: 200;
   color: #fff;
   text-align: left;
+  cursor: default;
   
   @media screen and (max-width: ${deviceSize.mobile}px) {
     font-size: 0.75em;
