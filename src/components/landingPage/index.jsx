@@ -34,8 +34,8 @@ const TopContainer = styled.div`
     margin-top: 7em;
 
     @media screen and (max-width: ${deviceSize.mobile}px) {
-        margin-top: 0em;
-        
+        margin-top: 7em;
+        flex-direction: column;
     }
 `;
 
@@ -49,6 +49,16 @@ const CalloutImageContainer = styled.div`
         height: 100%;
         margin-right: 5em;
     }
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        margin: 2em;
+        width: 90vw;
+
+        img {
+            width: 100%;
+            margin:0;
+        }
+    }
 `;
 
 const TextContainer = styled.div`
@@ -60,7 +70,7 @@ const TextContainer = styled.div`
 
     @media screen and (max-width: ${deviceSize.mobile}px) {
         font-size: 1.2em;
-        
+        width: 80%;
     }
 `;
 
@@ -71,6 +81,9 @@ const ScrollContainer = styled.div`
     img {
         width: 100%;
         height: 100%;
+    }
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        margin-bottom: 2em;
     }
 `;
 
@@ -89,6 +102,11 @@ export function LandingPage(props) {
                     <TextContainer>
                         <h1>Looking for help with an upcoming transition in your business?</h1>
                     </TextContainer>
+                    {isMobile && (
+                    <CalloutImageContainer>
+                        <img src= {welcomeImg} alt="img" />
+                    </CalloutImageContainer>
+                    )}
                 </TopContainer>
                 <Marginer direction="vertical" margin={200}/>
                 <ScrollContainer>

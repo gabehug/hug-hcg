@@ -34,7 +34,7 @@ const TopSectionContainer = styled.div`
     @media screen and (max-width: ${deviceSize.mobile}px) {
         font-size: 1.2em;
         margin: 4.5em 2em 2em 2em;
-        width: 16em;
+        width: 20em;
     }
 `;
 
@@ -78,7 +78,7 @@ const ButtonContainer = styled(Link)`
     margin: 0em 12em;
     
     @media screen and (max-width: ${deviceSize.mobile}px) {
-        margin: 4em 2em;
+        margin: 0em 2em 6em 2em;
     }
 `;
 

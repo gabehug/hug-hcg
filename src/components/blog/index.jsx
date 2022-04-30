@@ -12,6 +12,9 @@ const BlogContainer = styled.div`
   background-size: cover;
   background-color: #fff;
 
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    width: 100%;
+    height: 575px;
 `;
 
 const Background = styled.div`
@@ -35,7 +38,8 @@ const BlogPostContainer = styled.div`
   border-radius: 20px;
 
   @media screen and (max-width: ${deviceSize.mobile}px) {
-    width: 80%;
+    width: 90%;
+    height: 475px;
   }
 `;
 
@@ -46,6 +50,7 @@ const DateContainer = styled.div`
 
   @media screen and (max-width: ${deviceSize.mobile}px) {
     font-size: 1em;
+    margin: 2em;
   }
 `;
 
@@ -55,7 +60,7 @@ const PostTitleContainer = styled.div`
 
   @media screen and (max-width: ${deviceSize.mobile}px) {
     font-size: 1.2em;
-    width: 12em;
+    width: 80%;
   }
 `;
 
@@ -67,8 +72,12 @@ const PostTextContainer = styled.div`
 
   @media screen and (max-width: ${deviceSize.mobile}px) {
     font-size: 0.8em;
-    width: 20em;
-    height: 22em;;
+    width: 90%;
+    height: auto;
+    margin: 1em 0em;
+    p {
+      margin: 0;
+    }
   }
 `;
 
@@ -77,7 +86,7 @@ const ButtonContainer = styled(Link)`
     margin-top: 3em;
 
     @media screen and (max-width: ${deviceSize.mobile}px) {
-      margin: 0em;
+      margin: 0em 0em 2em 0em;
     }
 `;
 

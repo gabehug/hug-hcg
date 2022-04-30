@@ -62,7 +62,7 @@ const TextContainer = styled.div`
 
   @media screen and (max-width: ${deviceSize.mobile}px) {
     font-size: 1em;
-    width: 20em;
+    width: 80%;
     height: 16em;
     margin: 0em 0em 0em 2em;
   }

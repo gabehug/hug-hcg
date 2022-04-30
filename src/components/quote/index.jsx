@@ -58,8 +58,8 @@ const QuoteText = styled.div`
   color: #393c3f;
 
   @media screen and (max-width: ${deviceSize.mobile}px) {
-    font-size: 1.02em;
-    width: 16em;
+    font-size: 1em;
+    width: 75vw;
 }
 `;
 

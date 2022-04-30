@@ -33,7 +33,7 @@ const TitleContainer = styled.div`
     font-size: 2em;
 
     @media screen and (max-width: ${deviceSize.mobile}px) {
-        font-size: 1em;
+        font-size: 1.2em;
         margin: 4em 2em 0em 2em;
     }
 `;
@@ -43,8 +43,8 @@ const WidgetContainer = styled.div`
     width: 100%;
 
     @media screen and (max-width: ${deviceSize.mobile}px) {
-        width: 20em;
-        margin: 2em;
+        width: 85vw;
+        margin: 2em 2em 4em 2em;
     }
 `;
 
