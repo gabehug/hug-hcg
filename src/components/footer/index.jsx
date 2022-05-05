@@ -295,7 +295,7 @@ export function Footer(props) {
               )}
                 <ListContainer>
                   <PortalTitle>
-                    <h1><a href="https://sites.google.com/view/hug-hcg-intranet/home">Employee Portal</a></h1>
+                    <h1><a href="https://sites.google.com/view/hug-hcg-intranet/home" target="_blank">Employee Portal</a></h1>
                   </PortalTitle>
                 </ListContainer>
                 {isMobile && ( 
