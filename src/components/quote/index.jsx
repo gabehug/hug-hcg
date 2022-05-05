@@ -10,6 +10,7 @@ const QuoteContainer = styled.div`
     height: 350px;
     background-size: cover;
     
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
       height: 100%;
   }
@@ -24,6 +25,7 @@ const Background = styled.div`
     justify-content: space-evenly;
     background-color: #fff;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
       flex-direction: column;
   }
@@ -43,10 +45,30 @@ const CalloutImageContainer = styled.div`
     height: 100%;
   }
 
+  {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
-    width: 50%;
-    height: 50%;
+    width: auto;
+    height: 30%;
 }
+
+  {/*Tablet*/}
+  @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+    width: 50%;
+    height: auto;
+    img {
+      margin: 2em;
+    }
+  }
+  {/*Laptop*/}
+    @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+        width: 30%;
+        height: auto;
+        margin: 6em;
+
+        img {
+          width: 100%;
+        }
+    }
 `;
 
 const QuoteText = styled.div`
@@ -57,10 +79,31 @@ const QuoteText = styled.div`
   line-height: 2em;
   color: #393c3f;
 
+  {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
-    font-size: 1em;
-    width: 75vw;
-}
+    width: 80%;
+
+    h2 {
+      font-size: 0.8em;
+    }
+  }
+
+  {/*Tablet*/}
+  @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+    width: 30em;
+    h2 {
+      font-size: 1em;
+    }
+  }
+  {/*Laptop*/}
+  @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+    width: 80%;
+    margin: 2em;
+    h2 {
+      font-size: 1.2em;
+    }
+    
+  }
 `;
 
 export function Quote(props) {

@@ -17,6 +17,10 @@ const ContactContainer = styled.div`
     @media screen and (max-width: ${deviceSize.mobile}px) {
       height: 800px;
     }
+    {/*Tablet*/}
+    @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+      height: 900px;
+  }
 `;
 
 const Background = styled.div`
@@ -38,6 +42,12 @@ const LeftContainer = styled.div`
     width: 100%;
     margin: 0em;
   }
+  {/*Laptop*/}
+  @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+    width: 50%;
+    margin: 2em 4em 0em 4em;
+  }
+  
 `;
 
 const TitleContainer = styled.div`
@@ -50,6 +60,15 @@ const TitleContainer = styled.div`
     font-size: 1.2em;
     margin: 3em 2em 0em 2em;
     height: 0em;
+  }
+  {/*Tablet*/}
+  @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+    font-size: 1.8em;
+    margin: 2em 1em;
+  }
+  {/*Laptop*/}
+  @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+    margin: 3em 2em 0em 2em;
   }
 `;
 
@@ -66,6 +85,19 @@ const TextContainer = styled.div`
     height: 16em;
     margin: 0em 0em 0em 2em;
   }
+  {/*Tablet*/}
+  @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+    height: auto;
+    font-size: 1em;
+    margin: 0em 4em 2em 2em;
+    p {
+      margin: 0;
+    }
+  }
+  {/*Laptop*/}
+  @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+    margin: 0em 2em 0em 4em;
+  }
 `;
 
 const FormContainer = styled.div`
@@ -74,8 +106,16 @@ const FormContainer = styled.div`
   height: 400px;
 
   @media screen and (max-width: ${deviceSize.mobile}px) {
-    width: 20em;
-    margin: 0em 0em 0em 2em;
+    width: 100%;
+    margin: 1em 0em 0em 2em;
+  }
+  {/*Tablet*/}
+  @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+    margin: 0em 2em;
+  }
+  {/*Laptop*/}
+  @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+    margin: 0em 2em 0em 4em;
   }
 `;
 
@@ -86,6 +126,11 @@ const RightContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  {/*Laptop*/}
+  @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+    width: 100%;
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -95,13 +140,17 @@ const ImageContainer = styled.div`
     width: 100%;
     height: 100%;
   }
+  {/*Laptop*/}
+  @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+    width: 0%;
+  }
 `;
 
 
 
 export function Contact(props) {
   const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
-
+  const isTablet = useMediaQuery({ maxWidth: deviceSize.tablet });
     return (
         <ContactContainer id="contact">
             <Background>
@@ -117,7 +166,7 @@ export function Contact(props) {
                   </FormContainer>
                 </LeftContainer>
                 <Marginer direction="horizontal" margin={isMobile ? 0 : 100} />
-                {!isMobile && ( 
+                {!isTablet && ( 
                 <RightContainer>
                   <ImageContainer>
                     <img src= {contactIMG} alt="img" />

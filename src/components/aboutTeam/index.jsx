@@ -14,6 +14,10 @@ const TeamContainer = styled.div`
     height: 1300px;
     background-color: #fff;
     background-size: cover;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        height: 100%;
+    }
 `;
 
 const Background = styled.div`
@@ -32,6 +36,10 @@ const TopContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        height: 100%;
+    }
 `;
 
 const MiddleContainer = styled.div`
@@ -54,6 +62,13 @@ const LeftContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        width: 100%;
+    }
+    {/*Tablet*/}
+    @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+        width: 40%;
     }
 `;
 
@@ -73,6 +88,17 @@ const ImageContainer = styled.div`
     @media screen and (max-width: ${deviceSize.mobile}px) {
         img {
             width: 10em;
+            margin: 2em 0em 1em 0em;
+        }
+    }
+    {/*Tablet*/}
+    @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+        width: 100%;
+        height: 20em;
+
+        img {
+            width: 80%;
+            height: auto;
         }
     }
 `;
@@ -86,27 +112,32 @@ const RightContainer = styled.div`
     justify-content: center;
 
     @media screen and (max-width: ${deviceSize.mobile}px) {
-        width: 100%;
+        align-items: center;
     }
 `;
 
 const NameContainer = styled.div`
     width: 100%;
     font-size: 1.7em;
-    text-align: left;
+    text-align: right;
     line-height: 0em;
     color: #2D3A54;
 
     @media screen and (max-width: ${deviceSize.mobile}px) {
         font-size: 1.2em;
         text-align: center;
+        margin: 4em 0em 0em 0em;
+    }
+    {/*Tablet*/}
+    @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+        font-size: 1.4em;
     }
 `;
 
 const PositionContainer  = styled.div`
     width: 100%;
     font-size: 0.8em;
-    text-align: left;
+    text-align: right;
 
     p {
         margin: 0;
@@ -125,6 +156,10 @@ const BottomContainer = styled.div`
     align-items: center;
     justify-content: center;
     background-color: #2D3A54 ;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        height: 450px;
+    }
 `;
 
 const BottomImageContainer = styled.div`
@@ -138,6 +173,16 @@ const BottomImageContainer = styled.div`
     img {
         width: 20em;
         height: auto;
+    }
+    {/*Tablet*/}
+    @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+        width: 80%;
+        height: 20em;
+
+        img {
+            width: 80%;
+            height: auto;
+        }
     }
 `;
 
@@ -164,6 +209,10 @@ const BottomTitleContainer = styled.div`
         font-size: 1.2em;
         margin: 0em 2em;
     }
+    {/*Tablet*/}
+    @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+        font-size: 1.8em;
+    }
 `;
 
 const TextContainer = styled.div`
@@ -179,8 +228,13 @@ const TextContainer = styled.div`
 
     @media screen and (max-width: ${deviceSize.mobile}px) {
         font-size: 1em;
-        width: 20em;
-        margin: 0em 2em;
+        width: 80%;
+        margin: 0em 2.5em;
+    }
+    {/*Tablet*/}
+    @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+        width: 100%;
+        font-size: 1em;
     }
 `;
 
@@ -189,7 +243,7 @@ const ButtonContainer = styled(Link)`
     text-decoration: none;
 
     @media screen and (max-width: ${deviceSize.mobile}px) {
-        margin: 0em 2em;
+        margin: 0em 2.5em;
     }
 `;
 
@@ -202,17 +256,17 @@ export function AboutTeam(props) {
                 <TopContainer>
                     <MiddleContainer>
                         <LeftContainer>
-                            <ImageContainer>
-                                <img src= {keith} alt="img" />
-                            </ImageContainer>
-                        </LeftContainer>
-                        <RightContainer>
                             <NameContainer>
                                 <h1>Keith Hug</h1>
                             </NameContainer>
                             <PositionContainer>
                                 <p>Managing Partner</p>
                             </PositionContainer>
+                        </LeftContainer>
+                        <RightContainer>
+                            <ImageContainer>
+                                <img src= {keith} alt="img" />
+                            </ImageContainer>
                         </RightContainer>
                     </MiddleContainer>
                 </TopContainer>

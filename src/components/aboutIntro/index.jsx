@@ -11,6 +11,14 @@ const IntroductionContainer = styled.div`
     height: 900px;
     background-color: #2D3A54;
     background-size: cover;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        height: 700px;
+    }
+    {/*Tablet*/}
+    @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+        height: 700px;
+    }
 `;
 
 const Background = styled.div`
@@ -55,6 +63,11 @@ const TitleContainer = styled.div`
         font-size: 1.2em;
         margin: 2em 0em -2em 2em;
     }
+    {/*Tablet*/}
+    @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+        font-size: 1.8em;
+        margin: 2em 2em 0em 2em;
+    }
 `;
 
 const TextContainer = styled.div`
@@ -64,22 +77,31 @@ const TextContainer = styled.div`
     text-align: left;
     line-height: 1.5em;
     color: white;
+    p {
+        margin: 0;
+    }
 
     @media screen and (max-width: ${deviceSize.mobile}px) {
         font-size: 1em;
-        width: 20em;
+        width: 80%;
         height: 25em;
-        margin: 0em 0em 0em 2em;
+        margin: 0em 0em 0em 2.5em;
+    }
+    {/*Tablet*/}
+    @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+        width: 80%;
+        font-size: 1em;
+        margin: 2em 4em;
     }
 `;
 
 export function AboutIntro(props) {
     const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
-
+    const isTablet = useMediaQuery({ maxWidth: deviceSize.tablet });
     return (
         <IntroductionContainer>
             <Background>
-                {!isMobile && (
+                {!isTablet && (
                 <ImageContainer>
                     <img src= {aboutIntro} alt="img" />
                 </ImageContainer>

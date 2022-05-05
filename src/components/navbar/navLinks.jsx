@@ -18,10 +18,11 @@ const LinksWrapper = styled.ul`
 
 const LinkItem = styled.li`
     height: 100%;
-    padding: 0 1.1em;
+    padding: 0 0.75em;
     color: #fff;
-    font-weight: 500;
-    font-size: 1.1em;
+    font-weight: 600;
+    font-size: 1em;
+    font-family: proxima-nova, sans-serif;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -56,7 +57,7 @@ export function NavLinks(props) {
     return (
         <NavLinksContainer>
             <LinksWrapper>
-                <LinkItem><a href="/#aboutLink">About</a></LinkItem>
+                <LinkItem><a href="/about">About</a></LinkItem>
                 <LinkItem><a href="/#work">Areas of Practice</a></LinkItem>
                 <LinkItem><a href="/#scheduling">Appointments</a></LinkItem>
                 <LinkItem><a href="/#contact">Contact Us</a></LinkItem>

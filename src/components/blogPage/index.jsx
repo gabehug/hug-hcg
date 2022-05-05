@@ -13,6 +13,10 @@ const BlogContainer = styled.div`
   @media screen and (max-width: ${deviceSize.mobile}px) {
     height: 100%;
 }
+{/*Tablet*/}
+  @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+    height: 100%;
+  }
 `;
 
 const Background = styled.div`
@@ -50,7 +54,11 @@ const BlogPostContainer = styled.button`
     width: 95%;
     height: 100%;
   }
-}
+  {/*Tablet*/}
+  @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+    width: 95%;
+    height: auto;  
+  }
 `;
 
 const DateContainer = styled.div`
@@ -70,7 +78,11 @@ const PostTitleContainer = styled.div`
 
   @media screen and (max-width: ${deviceSize.mobile}px) {
     font-size: 1.2em;
-    width: 16em;
+    width: 80%;
+  }
+  {/*Tablet*/}
+  @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+    font-size: 1.8em;
   }
 `;
 
@@ -98,8 +110,13 @@ const TextContainer = styled.div`
 
   @media screen and (max-width: ${deviceSize.mobile}px) {
     font-size: 1em;
-    width: 20em;
+    width: 80%;
 }
+  {/*Tablet*/}
+  @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+    width: 90%;
+    font-size: 1em;
+  }
 `;
 
 export function BlogPage(props) {

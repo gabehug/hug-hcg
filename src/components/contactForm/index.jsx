@@ -36,7 +36,6 @@ const NameContainer = styled.div`
         font-size: 0.75em;
         text-align: left;
     }
-
 `;
 
 const EmailContainer = styled.div`
@@ -81,7 +80,7 @@ const MessageContainer  = styled.div`
     }
 
     @media screen and (max-width: ${deviceSize.mobile}px) {
-        width: 100%;
+        width: 60vw;
     }
 `;
 

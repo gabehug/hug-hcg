@@ -11,7 +11,12 @@ const WorkContainer = styled.div`
     height: 900px;
     background-size: cover;
 
-    @media screen and (max-width: ${deviceSize.mobile}px) {
+    {/*Tablet*/}
+    @media screen and (max-width: ${deviceSize.tablet}px) {
+        height: 100%;
+    }
+    {/*Laptop*/}
+    @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
         height: 100%;
     }
     
@@ -27,12 +32,13 @@ const Background = styled.div`
 
 
 const TopSectionContainer = styled.div`
-    width: 60%;
+    width: 75%;
     height: auto;
     padding: 1em;
     margin-bottom: 6em;
 
-    @media screen and (max-width: ${deviceSize.mobile}px) {
+    {/*Tablet*/}
+    @media screen and (max-width: ${deviceSize.tablet}px) {
         width: 100%;
         height: auto;
         display: flex;
@@ -40,6 +46,11 @@ const TopSectionContainer = styled.div`
         justify-content: center;
         align-items: center;
         margin-bottom: 2em;
+    }
+    {/*Laptop*/}
+    @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+        width: 80%;
+        margin-bottom: 3em;
     }
 `;
 
@@ -68,10 +79,10 @@ const CardTitle = styled.div`
     display: flex;
     margin: 2em;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         justify-content: center;
     }
-
 `;
 
 const CardText = styled.div`
@@ -89,16 +100,17 @@ const CardText = styled.div`
 
 export function Work(props) {
     const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
+    const isTablet = useMediaQuery({ maxWidth: deviceSize.tablet });
     return (
         <WorkContainer id="work">
             <Marginer direction="vertical" margin={50}/>
             <Background>
-                {!isMobile && (
+                {!isTablet && (
                     <TopSectionContainer>
                         <CarouselInfo />
                     </TopSectionContainer>
                 )}
-                {isMobile && (
+                {isTablet && (
                     <TopSectionContainer>
                             <CardContainer>
                                     <CardTitle>

@@ -12,9 +12,16 @@ const BlogContainer = styled.div`
   background-size: cover;
   background-color: #fff;
 
+  {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     width: 100%;
-    height: 575px;
+    height: 550px;
+  }
+  {/*Tablet*/}
+  @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+    height: 675px;
+  }
+
 `;
 
 const Background = styled.div`
@@ -37,10 +44,20 @@ const BlogPostContainer = styled.div`
   background-color: #393C3E;
   border-radius: 20px;
 
+  {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     width: 90%;
     height: 475px;
   }
+  {/*Tablet*/}
+  @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+    width: 90%;
+  }
+  {/*Laptop*/}
+  @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+    width: 90%;
+    margin-bottom: 3em;
+    }
 `;
 
 const DateContainer = styled.div`
@@ -48,9 +65,14 @@ const DateContainer = styled.div`
   font-size: 1.5em;
   margin-bottom: 1em;
 
+  {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     font-size: 1em;
     margin: 2em;
+  }
+  {/*Tablet*/}
+  @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+    font-size: 1.2em;
   }
 `;
 
@@ -58,10 +80,20 @@ const PostTitleContainer = styled.div`
   color: white;
   font-size: 1.7em;
 
+  {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     font-size: 1.2em;
     width: 80%;
   }
+  {/*Tablet*/}
+  @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+    font-size: 1.5em;
+    width: 80%;
+  }
+  {/*Laptop*/}
+  @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+    font-size: 2em;
+    }
 `;
 
 const PostTextContainer = styled.div`
@@ -70,6 +102,7 @@ const PostTextContainer = styled.div`
   height: 12em;
   font-size: 1.1em;
 
+  {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     font-size: 0.8em;
     width: 90%;
@@ -79,15 +112,38 @@ const PostTextContainer = styled.div`
       margin: 0;
     }
   }
+  {/*Tablet*/}
+  @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+    font-size: 1em;
+    width: 80%;
+    p {
+      margin: 2em 0em;
+    }
+  }
+  {/*Laptop*/}
+  @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+    p {
+      font-size: 1.1em;
+      margin: 2em 1em;
+    }
 `;
 
 const ButtonContainer = styled(Link)`
-    text-decoration: none;
-    margin-top: 3em;
+  text-decoration: none;
+  margin-top: 3em;
 
-    @media screen and (max-width: ${deviceSize.mobile}px) {
-      margin: 0em 0em 2em 0em;
-    }
+  {/*Mobile*/}
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    margin: 1em 0em 2em 0em;
+  }
+  {/*Tablet*/}
+  @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+    margin: 0em;
+  }
+  {/*Laptop*/}
+  @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+    margin: 0em;
+  }
 `;
 
 

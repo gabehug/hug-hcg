@@ -50,10 +50,11 @@ export function NavMenu({ isOpen }) {
     return (
         <NavMenuContainer> 
             <LinksWrapper>
-                <LinkItem><a href="/#aboutLink">About</a></LinkItem>
+                <LinkItem><a href="/about">About</a></LinkItem>
                 <LinkItem><a href="/#work">Areas of Practice</a></LinkItem>
                 <LinkItem><a href="/#scheduling">Appointments</a></LinkItem>
                 <LinkItem><a href="/#contact">Contact Us</a></LinkItem>
+                <LinkItem><a href="/blog">Blog</a></LinkItem>
                 <Link href="https://www.linkedin.com/in/keith-hug-2a7905/" target="_blank"> <img src= {linkedInDark} alt="linkedinLogo"></img></Link>
             </LinksWrapper>
         </NavMenuContainer>

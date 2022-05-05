@@ -12,10 +12,16 @@ const Link = styled.a`
     color: inherit;
     padding: 1.5em 0.5em;
     font-size: inherit;
+    border-top: 2px solid transparent;
+    transition: all 300ms ease-in-out;
+
+    :hover {
+        border-top: 2px solid #8194AD;
+    }
 
     img {
         height: 1.5em;
-        width: auto;
+        width: 100%;
     }
 `;
 

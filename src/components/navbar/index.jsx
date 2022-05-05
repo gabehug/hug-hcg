@@ -20,7 +20,6 @@ const NavbarContainer = styled.div`
     position: fixed;
     top: 0;
     z-index: 3;
-    transition: all 1s ease;
     padding: 5px 15px;
     display: flex;
     align-items: center;
@@ -72,20 +71,21 @@ const RightContainer = styled.div`
 
 export function Navbar(props) {
     const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
+    const isTablet = useMediaQuery({ maxWidth: deviceSize.tablet });
     return (
         <PageContainer> 
             <NavbarContainer> 
                 <LeftContainer>
                     <Logo />
                 </LeftContainer>
-                {!isMobile && ( 
+                {!isTablet && ( 
                 <MiddleContainer>
                     <NavLinks />
                 </MiddleContainer>
                 )}
                 <RightContainer>
-                    {!isMobile && ( <SocialLinks /> )}
-                    {isMobile && ( <Menu />)}
+                    {!isTablet && ( <SocialLinks /> )}
+                    {isTablet && ( <Menu />)}
                 </RightContainer>
             </NavbarContainer>
         </PageContainer>

@@ -11,8 +11,14 @@ const SchedulingContainer = styled.div`
     background-size: cover;
     background-color: #2D3A54;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         height: 100%;
+    }
+
+    {/*Tablet*/}
+    @media screen and (min-width: ${deviceSize.mobile}px) and (min-width: ${deviceSize.mobile}px) {
+        height: 900px;
     }
 `;
 
@@ -32,9 +38,19 @@ const TitleContainer = styled.div`
     color: white;
     font-size: 2em;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         font-size: 1.2em;
         margin: 4em 2em 0em 2em;
+    }
+
+    {/*Tablet*/}
+    @media screen and (min-width: ${deviceSize.mobile}px) and (min-width: ${deviceSize.mobile}px) {
+        font-size: 1.8em;
+    }
+    {/*Laptop*/}
+    @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+        font-size: 2em;
     }
 `;
 
@@ -42,6 +58,7 @@ const WidgetContainer = styled.div`
     height: 100%;
     width: 100%;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         width: 85vw;
         margin: 2em 2em 4em 2em;

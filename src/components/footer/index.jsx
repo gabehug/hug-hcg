@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Marginer } from "../../components/marginer";
-import linkedIn from "../../assets/linkedIn.png";
+import LinkedInGrey from "../../assets/LinkedInGrey.png";
 import { Logo } from "../logo";
 import { useMediaQuery } from "react-responsive";
 import { deviceSize } from "../responsive";
@@ -14,7 +14,7 @@ const FooterContainer = styled.div`
     background-size: cover;
     
     @media screen and (max-width: ${deviceSize.mobile}px) {
-      height: 370px;
+      height: 330px;
     }
 `;
 
@@ -41,8 +41,9 @@ const LeftContainer = styled.div`
 
   @media screen and (max-width: ${deviceSize.mobile}px) {
     margin: 2em 0em;
-    width: 20em;
+    width: 100%;
   } 
+  
 `;
 
 const LogoContainer = styled.div`
@@ -69,11 +70,22 @@ const DescriptionContainer = styled.div`
   margin: 0em 1em; 
 
   @media screen and (max-width: ${deviceSize.mobile}px) {
-    width: 22em;
+    width: 80%;
     height: 10em;
     font-size: 0.85em;
     margin: 0em 2em;
 }
+
+  {/*Tablet*/}
+  @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+    width: 100%;
+    font-size: 0.85em;
+  }
+  {/*Laptop*/}
+  @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+    width: 100%;
+    font-size: 1em;
+  }
 `;
 
 const CopywriteContainer = styled.div`
@@ -103,11 +115,28 @@ const RightContainer = styled.div`
     flex-direction: column;
     justify-content: center;
   }
+  {/*Tablet*/}
+  @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+    margin: 5em 2em 0em 0em;
+  }
+  {/*Laptop*/}
+  @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+    margin: 5em 0em 0em 0em;
+  }
 `;
 
 const ListContainer = styled.div`
   width: auto;
   height: auto;
+
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    height: 0em;
+  }
+
+  {/*Tablet*/}
+  @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+    margin: 1em 1.2em;
+  }
 `;
 
 const ListTitle = styled.div`
@@ -120,7 +149,11 @@ const ListTitle = styled.div`
   
   @media screen and (max-width: ${deviceSize.mobile}px) {
     font-size: 0.75em;
-    margin: 2em 2em 0em 2em;
+    margin: 1em 2em;
+  }
+  {/*Tablet*/}
+  @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+    font-size: 0.75em;
   }
 
 `;
@@ -133,6 +166,11 @@ const ListItemsContainer = styled.div`
     line-height: 1em;
     margin: 0em;
   }
+  {/*Tablet*/}
+  @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+    line-height: 1.2em;
+  }
+
 `;
 
 const ImgContainer = styled.div`
@@ -176,10 +214,10 @@ const LinkItem = styled.div`
 
 export function Footer(props) {
   const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
+  const isTablet = useMediaQuery({ maxWidth: deviceSize.tablet });
     return (
         <FooterContainer>
             <Background>
-
               <LeftContainer>
                 <LogoContainer>
                   <Logo />
@@ -217,7 +255,7 @@ export function Footer(props) {
                     <LinkItem><a href="tel:6513292875">(651) 329-2875</a></LinkItem>
                     <LinkItem><a href="mailto: hug.humancapitalgroup@gmail.com" target="_blank">Email us</a></LinkItem>
                     <ImgContainer>
-                      <LinkItem><a href="https://www.linkedin.com/in/keith-hug-2a7905/" target="_blank"> <img src= {linkedIn} alt="linkedinLogo"></img></a></LinkItem>
+                      <LinkItem><a href="https://www.linkedin.com/in/keith-hug-2a7905/" target="_blank"> <img src= {LinkedInGrey} alt="linkedinLogo"></img></a></LinkItem>
                     </ImgContainer>
                   </ListItemsContainer>
                 </ListContainer>

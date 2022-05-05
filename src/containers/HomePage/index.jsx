@@ -12,6 +12,8 @@ import { Quote } from "../../components/quote";
 import { Blog } from "../../components/blog";
 import { Contact } from "../../components/contact";
 import { Footer } from "../../components/footer";
+import { useMediaQuery } from "react-responsive";
+import { deviceSize } from "../../components/responsive";
 
 
 const Background = styled.div`
@@ -23,6 +25,7 @@ const Background = styled.div`
 
 
 export function HomePage(props) {
+    const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
     return (
         <PageContainer>
             <Background>
@@ -30,7 +33,9 @@ export function HomePage(props) {
                 <Marginer direction="vertical" margin={100}/>
                 <LandingPage/>
                 <Work />
-                <Introduction />
+                {!isMobile && (
+                    <Introduction />
+                )}
                 <Scheduling />
                 <Marginer direction="vertical" margin={50}/>
                 <Quote />

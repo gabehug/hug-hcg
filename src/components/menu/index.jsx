@@ -39,7 +39,7 @@ const menuVariants = {
     }
 }
 
-const menuTransition = { type: "spring", duration: 1, stiffness: 33, delay: 0.05 }
+const menuTransition = { type: "spring", duration: 0.1, stiffness: 33, delay: 0 }
 
 export function Menu(props) {
 

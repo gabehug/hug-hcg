@@ -11,6 +11,14 @@ const InformationContainer = styled.div`
     height: 1350px;
     background-color: #fff;
     background-size: cover;
+
+    @media screen and (max-width: ${deviceSize.mobile}px) {
+        height: 100%;
+    }
+    {/*Tablet*/}
+    @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+        height: 100%;
+    }
 `;
 
 const Background = styled.div`
@@ -32,6 +40,11 @@ const TopContainer = styled.div`
     @media screen and (max-width: ${deviceSize.mobile}px) {
         height: 400px;
     }
+
+    {/*Tablet*/}
+    @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+        height: 100%;
+    }
 `;
 
 const TextContainer = styled.div`
@@ -46,6 +59,12 @@ const TextContainer = styled.div`
         font-size: 1em;
         margin: 2em;
     }
+    {/*Tablet*/}
+    @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+        font-size: 1em;
+        margin: 0em 2em;
+    }
+    
 `;
 
 const ImageContainer = styled.div`
@@ -61,6 +80,17 @@ const ImageContainer = styled.div`
         width: 28em;
         height: 17em;
     }
+
+    {/*Tablet*/}
+    @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+        width: 100%;
+        height: 20em;
+
+        img {
+            width: 80%;
+            height: auto;
+        }
+    }
 `;
 
 const BottomContainer = styled.div`
@@ -72,7 +102,11 @@ const BottomContainer = styled.div`
 
     @media screen and (max-width: ${deviceSize.mobile}px) {
         flex-direction: column;
-        height: 100%;
+        height: 750px;
+    }
+    {/*Tablet*/}
+    @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+        height: 500px;
     }
 `;
 
@@ -95,16 +129,29 @@ const BottomImageContainer = styled.div`
             height: auto;
         }
     }
+    {/*Tablet*/}
+    @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+        width: 100%;
+        height: 20em;
+
+        img {
+            width: 60%;
+            height: auto;
+        }
+    }
 `;
 
 const RightContainer = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
     @media screen and (max-width: ${deviceSize.mobile}px) {
         width: 100%;
+    }
+    {/*Tablet*/}
+    @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+        width: 100%;
+        margin-right: 2em;
     }
 `;
 
@@ -117,7 +164,12 @@ const TitleContainer = styled.div`
 
     @media screen and (max-width: ${deviceSize.mobile}px) {
         font-size: 1.2em;
-        margin: 0em 0em -2em 3em;
+        margin: 2em 0em -3em 2em;
+    }
+    {/*Tablet*/}
+    @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+        font-size: 1.8em;
+        margin: 0em;
     }
 `;
 
@@ -129,9 +181,18 @@ const AltTextContainer = styled.div`
     margin: 2em 0em;
 
     @media screen and (max-width: ${deviceSize.mobile}px) {
-        width: 20em;
+        width: 80%;
         font-size: 1em;
-        margin: 0em 2em;
+        margin: 0em 2.5em;
+    }
+    {/*Tablet*/}
+    @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+        width: 100%;
+        font-size: 1em;
+        margin: 1em 0em 4em 0em;
+        p {
+            margin: 0;
+        }
     }
 `;
 
