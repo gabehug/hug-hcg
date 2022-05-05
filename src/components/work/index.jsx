@@ -19,6 +19,10 @@ const WorkContainer = styled.div`
     @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
         height: 100%;
     }
+    {/*Desktop*/}
+    @media screen and (min-width: ${deviceSize.laptop}px) and (max-width: ${deviceSize.desktop}px) {
+        height: 100%;
+    }
     
 `;
 
@@ -51,6 +55,11 @@ const TopSectionContainer = styled.div`
     @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
         width: 80%;
         margin-bottom: 3em;
+    }
+    {/*Desktop*/}
+    @media screen and (min-width: ${deviceSize.laptop}px) and (max-width: ${deviceSize.desktop}px) {
+        width: 70em;
+        margin-top: 2em;
     }
 `;
 

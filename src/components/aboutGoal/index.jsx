@@ -69,6 +69,12 @@ const TextContainer = styled.div`
         font-size: 1em;
         margin: 0em;
     }
+    {/*Laptop*/}
+    @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+        width: 100%;
+        font-size: 1.2m;
+
+    }
 `;
 
 const ImageContainer = styled.div`
@@ -91,6 +97,17 @@ const ImageContainer = styled.div`
         img {
             width: 80%;
             height: auto;
+        }
+    }
+    {/*Laptop*/}
+    @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+        width: 100%;
+        height: auto;
+        margin: 2em;
+
+        img {
+            width: 75%;
+
         }
     }
 `;
@@ -122,6 +139,10 @@ const TitleContainer = styled.div`
     @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
         font-size: 1.8em;
         margin: 0em;
+    }
+    {/*Laptop*/}
+    @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+        font-size: 2em;
     }
 `;
 

@@ -12,9 +12,13 @@ const BlogContainer = styled.div`
 
   @media screen and (max-width: ${deviceSize.mobile}px) {
     height: 100%;
-}
-{/*Tablet*/}
+  }
+  {/*Tablet*/}
   @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+    height: 100%;
+  }
+  {/*Laptop*/}
+  @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
     height: 100%;
   }
 `;
@@ -59,6 +63,11 @@ const BlogPostContainer = styled.button`
     width: 95%;
     height: auto;  
   }
+  {/*Laptop*/}
+  @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+    width: 90%;
+    height: auto;
+  }
 `;
 
 const DateContainer = styled.div`
@@ -83,6 +92,10 @@ const PostTitleContainer = styled.div`
   {/*Tablet*/}
   @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
     font-size: 1.8em;
+  }
+  {/*Laptop*/}
+  @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+    font-size: 2em;
   }
 `;
 
@@ -116,6 +129,11 @@ const TextContainer = styled.div`
   @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
     width: 90%;
     font-size: 1em;
+  }
+  {/*Laptop*/}
+  @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+    width: 90%;
+    font-size: 1.2em;
   }
 `;
 

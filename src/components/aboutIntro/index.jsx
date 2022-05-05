@@ -39,6 +39,17 @@ const ImageContainer = styled.div`
         width: 100%;
         height: 100%;
     }
+    {/*Laptop*/}
+    @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+        width: 100%;
+        height: auto;
+        margin: 2em;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
 `;
 
 const RightSectionContainer = styled.div`
@@ -61,12 +72,17 @@ const TitleContainer = styled.div`
 
     @media screen and (max-width: ${deviceSize.mobile}px) {
         font-size: 1.2em;
-        margin: 2em 0em -2em 2em;
+        margin: 8em 0em 2em 2em;
     }
     {/*Tablet*/}
     @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
         font-size: 1.8em;
         margin: 2em 2em 0em 2em;
+    }
+    {/*Laptop*/}
+    @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+        font-size: 2em;
+        margin: 0em 0em 1em 1em;
     }
 `;
 
@@ -92,6 +108,12 @@ const TextContainer = styled.div`
         width: 80%;
         font-size: 1em;
         margin: 2em 4em;
+    }
+    {/*Laptop*/}
+    @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+        width: 85%;
+        font-size: 1.2em;
+        margin: 0em 0em 1em 2em;
     }
 `;
 

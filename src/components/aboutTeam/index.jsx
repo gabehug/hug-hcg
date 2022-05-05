@@ -40,6 +40,10 @@ const TopContainer = styled.div`
     @media screen and (max-width: ${deviceSize.mobile}px) {
         height: 100%;
     }
+    {/*Laptop*/}
+    @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+        height: 100%;
+    }
 `;
 
 const MiddleContainer = styled.div`
@@ -69,6 +73,11 @@ const LeftContainer = styled.div`
     {/*Tablet*/}
     @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
         width: 40%;
+    }
+    {/*Laptop*/}
+    @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+        width: 50%;
+        margin: 2em;
     }
 `;
 
@@ -132,6 +141,10 @@ const NameContainer = styled.div`
     @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
         font-size: 1.4em;
     }
+    {/*Laptop*/}
+    @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+        font-size: 1.5em;
+    }
 `;
 
 const PositionContainer  = styled.div`
@@ -147,6 +160,7 @@ const PositionContainer  = styled.div`
         font-size: 0.75em;
         text-align: center;
     }
+    
 `;
 
 const BottomContainer = styled.div`
@@ -184,6 +198,15 @@ const BottomImageContainer = styled.div`
             height: auto;
         }
     }
+    {/*Laptop*/}
+    @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+        width: 100%;
+        height: auto;
+
+        img {
+            width: 50%;
+        }
+    }
 `;
 
 const BottomRightContainer = styled.div`
@@ -213,6 +236,10 @@ const BottomTitleContainer = styled.div`
     @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
         font-size: 1.8em;
     }
+    {/*Laptop*/}
+    @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+        font-size: 2em;
+    }
 `;
 
 const TextContainer = styled.div`
@@ -236,6 +263,11 @@ const TextContainer = styled.div`
         width: 100%;
         font-size: 1em;
     }
+    {/*Laptop*/}
+    @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+        width: 90%;
+        font-size: 1.2em;
+    }
 `;
 
 const ButtonContainer = styled(Link)`
@@ -244,6 +276,10 @@ const ButtonContainer = styled(Link)`
 
     @media screen and (max-width: ${deviceSize.mobile}px) {
         margin: 0em 2.5em;
+    }
+    {/*Laptop*/}
+    @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+        margin: 0em;
     }
 `;
 

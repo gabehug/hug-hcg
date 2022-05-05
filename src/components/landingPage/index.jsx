@@ -126,9 +126,8 @@ const TextContainer = styled.div`
 `;
 
 const ScrollContainer = styled.div`
-    width: auto;
+    width: 2em;
     height: 2em;
-    
     img {
         width: 100%;
         height: 100%;

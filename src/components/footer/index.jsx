@@ -28,6 +28,10 @@ const Background = styled.div`
     @media screen and (max-width: ${deviceSize.mobile}px) {
       flex-direction: column;
     }
+    {/*Desktop*/}
+    @media screen and (min-width: ${deviceSize.laptop}px) and (max-width: ${deviceSize.desktop}px) {
+      margin: 0em 4em;
+    }
 `;
 
 const LeftContainer = styled.div`
@@ -94,7 +98,7 @@ const CopywriteContainer = styled.div`
   font-size: 0.6em;
   color: #ACACAC;
   text-align: left;
-  margin: 18em 0em 0em 1em;
+  margin: 18em 0em 0em 2em;
 
   @media screen and (max-width: ${deviceSize.mobile}px) {
     margin: 0em 2em;

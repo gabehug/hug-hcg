@@ -5,7 +5,6 @@ import { PageContainer } from "../../components/pageContainer";
 import { Marginer } from "../../components/marginer";
 import { Navbar } from "../../components/navbar";
 import { Footer } from "../../components/footer";
-import { AboutLanding } from "../../components/aboutLanding";
 import { AboutIntro } from "../../components/aboutIntro";
 import { AboutInformation } from "../../components/aboutInformation";
 import { AboutGoal } from "../../components/aboutGoal";
