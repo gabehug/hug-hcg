@@ -216,6 +216,35 @@ const LinkItem = styled.div`
   }
 `;
 
+const PortalTitle = styled.div`
+  font-size: 0.8em;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 200;
+  color: #fff;
+  text-align: left;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+
+  &: hover {
+    color: #8193ad;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    font-size: 0.75em;
+    margin: 1em 2em;
+  }
+  {/*Tablet*/}
+  @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
+    font-size: 0.75em;
+  }
+
+`;
+
 export function Footer(props) {
   const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
   const isTablet = useMediaQuery({ maxWidth: deviceSize.tablet });
@@ -265,9 +294,9 @@ export function Footer(props) {
                 </ListContainer>
               )}
                 <ListContainer>
-                  <ListTitle>
-                    <h1>Employee Portal</h1>
-                  </ListTitle>
+                  <PortalTitle>
+                    <h1><a href="https://sites.google.com/view/hug-hcg-intranet/home">Employee Portal</a></h1>
+                  </PortalTitle>
                 </ListContainer>
                 {isMobile && ( 
                 <CopywriteContainer>
