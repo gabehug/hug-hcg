@@ -2,10 +2,8 @@ import React from "react";
 import { useFormik } from "formik";
 import { PageContainer } from "../pageContainer";
 import styled from "styled-components";
-import { Button } from "../button";
 import * as Yup from "yup"; 
 import emailjs from "emailjs-com";
-import { useMediaQuery } from "react-responsive";
 import { deviceSize } from "../responsive";
 
 const Background = styled.div`
@@ -133,8 +131,10 @@ export function ContactForm(props) {
                 .max(2000, "2000 character limit")
                 .required("Required"),
         }),
-        onSubmit: (values) => {
+        onSubmit: (values, {resetForm}) => {
             console.log(values);
+            resetForm();
+            alert(JSON.stringify(values, null, 2));
         },
     });
 
@@ -189,7 +189,7 @@ export function ContactForm(props) {
                         {formik.touched.message && formik.errors.message ? <p>{formik.errors.message}</p> :  null}
                     </MessageContainer>
                     <ButtonContainer>
-                        <button type="submit">Submit</button>
+                        <button type="submit" disabled={!formik.isValid}>Submit</button>
                     </ButtonContainer>
                 </form>
             </Background>
