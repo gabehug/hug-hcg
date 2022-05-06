@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Marginer } from "../../components/marginer";
 import quoteIMG  from "../../assets/quoteIMG.png";
-import { useMediaQuery } from "react-responsive";
 import { deviceSize } from "../responsive";
 
 const QuoteContainer = styled.div`
@@ -49,26 +47,26 @@ const CalloutImageContainer = styled.div`
   @media screen and (max-width: ${deviceSize.mobile}px) {
     width: auto;
     height: 30%;
-}
-
+  }
   {/*Tablet*/}
   @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
     width: 50%;
     height: auto;
+
     img {
       margin: 2em;
     }
   }
   {/*Laptop*/}
-    @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
-        width: 30%;
-        height: auto;
-        margin: 6em;
+  @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
+    width: 30%;
+    height: auto;
+    margin: 6em;
 
-        img {
-          width: 100%;
-        }
+    img {
+      width: 100%;
     }
+  }
 `;
 
 const QuoteText = styled.div`
@@ -87,7 +85,6 @@ const QuoteText = styled.div`
       font-size: 0.8em;
     }
   }
-
   {/*Tablet*/}
   @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
     width: 30em;
@@ -102,7 +99,6 @@ const QuoteText = styled.div`
     h2 {
       font-size: 1.2em;
     }
-    
   }
 `;
 

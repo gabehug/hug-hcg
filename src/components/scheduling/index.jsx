@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Marginer } from "../../components/marginer";
 import { InlineWidget } from "react-calendly";
-import { useMediaQuery } from "react-responsive";
 import { deviceSize } from "../responsive";
 
 const SchedulingContainer = styled.div`
@@ -15,7 +14,6 @@ const SchedulingContainer = styled.div`
     @media screen and (max-width: ${deviceSize.mobile}px) {
         height: 100%;
     }
-
     {/*Tablet*/}
     @media screen and (min-width: ${deviceSize.mobile}px) and (min-width: ${deviceSize.mobile}px) {
         height: 900px;
@@ -43,7 +41,6 @@ const TitleContainer = styled.div`
         font-size: 1.2em;
         margin: 4em 2em 0em 2em;
     }
-
     {/*Tablet*/}
     @media screen and (min-width: ${deviceSize.mobile}px) and (min-width: ${deviceSize.mobile}px) {
         font-size: 1.8em;

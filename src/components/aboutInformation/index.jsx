@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Marginer } from "../marginer";
 import topImage from "../../assets/topImage.png";
 import bottomImage from "../../assets/bottomImage.png";
 import { useMediaQuery } from "react-responsive";
@@ -12,6 +11,7 @@ const InformationContainer = styled.div`
     background-color: #fff;
     background-size: cover;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         height: 100%;
     }
@@ -41,10 +41,10 @@ const TopContainer = styled.div`
     flex-direction: row;
     justify-content: space-between;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         height: 400px;
     }
-
     {/*Tablet*/}
     @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
         height: 100%;
@@ -61,7 +61,8 @@ const TextContainer = styled.div`
     text-align: left;
     line-height: 1.5em;
     margin: 5em;
-
+    
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         width: 100%;
         font-size: 1em;
@@ -125,6 +126,7 @@ const BottomContainer = styled.div`
     flex-direction: row;
     align-items: center;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         flex-direction: column;
         height: 750px;
@@ -152,6 +154,7 @@ const BottomImageContainer = styled.div`
         height: 18 em;
     }
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         img {
             width: 20em;
@@ -185,6 +188,7 @@ const RightContainer = styled.div`
     display: flex;
     flex-direction: column;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         width: 100%;
     }
@@ -207,6 +211,7 @@ const TitleContainer = styled.div`
     text-align: left;
     margin: 5em 0em -2em 0em;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         font-size: 1.2em;
         margin: 2em 0em -3em 2em;
@@ -231,6 +236,7 @@ const AltTextContainer = styled.div`
     line-height: 1.5em;
     margin: 2em 0em;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         width: 80%;
         font-size: 1em;
@@ -259,6 +265,7 @@ const AltTextContainer = styled.div`
 
 export function AboutInformation(props) {
     const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
+    
     return (
         <InformationContainer>
             <Background>

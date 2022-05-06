@@ -79,6 +79,7 @@ const MessageContainer  = styled.div`
         text-align: left;
     }
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         width: 60vw;
     }

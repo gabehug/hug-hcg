@@ -5,9 +5,6 @@ import scrollIndicator from "../../assets/scrollIndi.png";
 import { Marginer } from "../marginer";
 import { useMediaQuery } from "react-responsive";
 import { deviceSize } from "../responsive";
-import { Button } from "../button";
-import { Link } from "react-router-dom";
-
 
 const LandingPageContainer = styled.div`
     width: 100%;
@@ -15,6 +12,7 @@ const LandingPageContainer = styled.div`
     background-color: #2D3A54;
     background-size: cover;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         height: 800px;
     }
@@ -75,7 +73,6 @@ const CalloutImageContainer = styled.div`
             height: 100%;
         }
     }
-
     {/*Tablet*/}
     @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
         width: 90vw;
@@ -122,16 +119,17 @@ const TextContainer = styled.div`
         font-size: 2em;
         margin: 0em 0em 0em 4em;
     }
-
 `;
 
 const ScrollContainer = styled.div`
     width: 2em;
     height: 2em;
+
     img {
         width: 100%;
         height: 100%;
     }
+
     {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         margin-bottom: 6em;
@@ -161,13 +159,11 @@ const AltTextContainer = styled.div`
     p {
         margin: 0;
     }
-    
 `;
-
-
 
 export function LandingPage(props) {
     const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
+    
     return (
         <LandingPageContainer>
             <Background>

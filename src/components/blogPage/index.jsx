@@ -10,6 +10,7 @@ const BlogContainer = styled.div`
   background-size: cover;
   background-color: #fff;
 
+  {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     height: 100%;
   }
@@ -54,6 +55,7 @@ const BlogPostContainer = styled.button`
   border: 1px solid white;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 
+  {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     width: 95%;
     height: 100%;
@@ -75,6 +77,7 @@ const DateContainer = styled.div`
   font-size: 1.2em;
   margin-top: 6em;
 
+  {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     margin: 4em 0em 1em 0em;
 }
@@ -85,6 +88,7 @@ const PostTitleContainer = styled.div`
   font-size: 1.8em;
   font-family: proxima-nova;
 
+  {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     font-size: 1.2em;
     width: 80%;
@@ -121,6 +125,7 @@ const TextContainer = styled.div`
     margin: 1em 0em;
   }
 
+  {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     font-size: 1em;
     width: 80%;

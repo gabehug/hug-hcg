@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 import { PageContainer } from "../../components/pageContainer";
-import { Marginer } from "../../components/marginer";
 import { Navbar } from "../../components/navbar";
 import { Footer } from "../../components/footer";
 import { AboutIntro } from "../../components/aboutIntro";

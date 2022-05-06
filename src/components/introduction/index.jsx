@@ -12,6 +12,7 @@ const IntroductionContainer = styled.div`
     background-color: #393C3E;
     background-size: cover;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.tablet}px) {
         height: 700px;
     }
@@ -55,6 +56,7 @@ const BottomSectionContainer = styled.div`
     display: flex;
     flex-direction: row;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.tablet}px) {
         height: 275px;
     }
@@ -73,10 +75,12 @@ const TextContainer = styled.div`
     text-align: left;
     line-height: 1.5em;
     color: white;
+
     p {
         margin: 0;
     }
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.tablet}px) {
         width: 100%;
         font-size: 1em;
@@ -96,11 +100,13 @@ const ImageContainer = styled.div`
     width: 42em;
     height: 22em;
     margin: -5em 6em;
+
     img {
         width: 80%;
         height: auto;
     }
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.tablet}px) {
         width: 100%;
         margin: 2em 0em;
@@ -121,6 +127,8 @@ const ImageContainer = styled.div`
 const ButtonContainer = styled(Link)`
     text-decoration: none;
     margin: 0em 12em;
+
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.tablet}px) {
         margin: 0em 4em;
     }
@@ -132,7 +140,6 @@ const ButtonContainer = styled(Link)`
 
 
 export function Introduction(props) {
-    const isTablet = useMediaQuery({ maxWidth: deviceSize.tablet });
     return (
         <IntroductionContainer id="aboutLink">
             <Background>

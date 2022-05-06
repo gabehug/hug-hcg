@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Marginer } from "../../components/marginer";
-import { Button } from "../button";
 import contactIMG from "../../assets/contactIMG.png";
 import { ContactForm } from "../contactForm";
 import { useMediaQuery } from "react-responsive";
@@ -14,6 +13,7 @@ const ContactContainer = styled.div`
     background-color: #2D3A54;
     background-size: cover;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
       height: 800px;
     }
@@ -38,6 +38,7 @@ const LeftContainer = styled.div`
   flex-direction: column;
   margin: 2em;
 
+  {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     width: 100%;
     margin: 0em;
@@ -56,6 +57,7 @@ const TitleContainer = styled.div`
   text-align: left;
   margin: 3em 0em -1em 0em;
 
+  {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     font-size: 1.2em;
     margin: 3em 2em 0em 2em;
@@ -79,6 +81,7 @@ const TextContainer = styled.div`
   text-align: left;
   color: white;
 
+  {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     font-size: 1em;
     width: 80%;
@@ -105,6 +108,7 @@ const FormContainer = styled.div`
   width: 100%;
   height: 400px;
 
+  {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     width: 100%;
     margin: 1em 0em 0em 2em;
@@ -136,10 +140,12 @@ const RightContainer = styled.div`
 const ImageContainer = styled.div`
   width: 90%;
   height: auto;
+  
   img {
     width: 100%;
     height: 100%;
   }
+
   {/*Laptop*/}
   @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
     width: 0%;

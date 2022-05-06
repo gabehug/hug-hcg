@@ -1,13 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import hugHCGLogo from "../../assets/hugHCGLogo";
 import { PageContainer } from "../../components/pageContainer";
-import { Marginer } from "../../components/marginer";
 import { useMediaQuery } from "react-responsive";
 import { deviceSize } from "../responsive";
 import { NavLinks } from "./navLinks";
 import { SocialLinks } from "./socialLinks";
-import { Link } from "react-router-dom";
 import { Logo } from "../logo";
 import { Menu } from "../menu";
 
@@ -25,6 +22,7 @@ const NavbarContainer = styled.div`
     align-items: center;
     justify-content: space-between;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         width: 100vw;
     }
@@ -35,18 +33,9 @@ const LeftContainer = styled.div`
     align-self: center;
     margin-left: 1em;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         margin: 0;
-    }
-`;
-
-const LogoContainer = styled.div`
-    width: 10em;
-    height: auto;
-
-    img {
-        width: 100%;
-        height: 100%;
     }
 `;
 
@@ -62,6 +51,7 @@ const RightContainer = styled.div`
     width: 4em;
     height: auto;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         width: 2em;
     }

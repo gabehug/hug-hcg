@@ -1,9 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Marginer } from "../../components/marginer";
 import { Button } from "../button";
 import { Link } from "react-router-dom";
-import { useMediaQuery } from "react-responsive";
 import { deviceSize } from "../responsive";
 
 const BlogContainer = styled.div`
@@ -108,6 +106,7 @@ const PostTextContainer = styled.div`
     width: 90%;
     height: auto;
     margin: 1em 0em;
+
     p {
       margin: 0;
     }
@@ -116,6 +115,7 @@ const PostTextContainer = styled.div`
   @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
     font-size: 1em;
     width: 80%;
+    
     p {
       margin: 2em 0em;
     }

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import PageContainer from "../../components/pageContainer";
 import { Link } from "react-router-dom";
 import hugHCGLogo from "../../assets/hugHCGLogo";
 

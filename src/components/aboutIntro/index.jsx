@@ -12,6 +12,7 @@ const IntroductionContainer = styled.div`
     background-color: #2D3A54;
     background-size: cover;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         height: 700px;
     }
@@ -39,6 +40,7 @@ const ImageContainer = styled.div`
         width: 100%;
         height: 100%;
     }
+
     {/*Laptop*/}
     @media screen and (min-width: ${deviceSize.tablet}px) and (max-width: ${deviceSize.laptop}px) {
         width: 100%;
@@ -58,6 +60,7 @@ const RightSectionContainer = styled.div`
     justify-content: center;
     align-items: left;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         width: 100%;
     }
@@ -70,6 +73,7 @@ const TitleContainer = styled.div`
     text-align: left;
     margin: 2em 0em 0em 0em;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         font-size: 1.2em;
         margin: 8em 0em 2em 2em;
@@ -93,10 +97,12 @@ const TextContainer = styled.div`
     text-align: left;
     line-height: 1.5em;
     color: white;
+
     p {
         margin: 0;
     }
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         font-size: 1em;
         width: 80%;

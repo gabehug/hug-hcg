@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 const NavLinksContainer = styled.div`
     height: 100%;
@@ -40,18 +39,6 @@ const LinkItem = styled.li`
         font-size: inherit;
     }
 `;
-
-const AnchorLink = styled(Link)`
-    text-decoration: none;
-    color: inherit;
-    padding: 1.5em 0.5em;
-    font-size: inherit;
-`;
-
-
-
-
-
 
 export function NavLinks(props) {
     return (

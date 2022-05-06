@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Marginer } from "../marginer";
-import goalImg from "../../assets/goalImg.png";
 import teamGraphic from "../../assets/teamGraphic.png";
 import keith from "../../assets/keith.png";
 import { Button } from "../button";
@@ -15,6 +14,7 @@ const TeamContainer = styled.div`
     background-color: #fff;
     background-size: cover;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         height: 100%;
     }
@@ -37,6 +37,7 @@ const TopContainer = styled.div`
     align-items: center;
     justify-content: space-evenly;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         height: 100%;
     }
@@ -55,6 +56,7 @@ const MiddleContainer = styled.div`
     align-items: center;
     font-size: 1.5em;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         flex-direction: column;
     }
@@ -67,6 +69,7 @@ const LeftContainer = styled.div`
     align-items: center;
     justify-content: center;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         width: 100%;
     }
@@ -94,6 +97,7 @@ const ImageContainer = styled.div`
         border-radius: 10px;
     }
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         img {
             width: 10em;
@@ -120,6 +124,7 @@ const RightContainer = styled.div`
     align-items: flex-start;
     justify-content: center;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         align-items: center;
     }
@@ -132,6 +137,7 @@ const NameContainer = styled.div`
     line-height: 0em;
     color: #2D3A54;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         font-size: 1.2em;
         text-align: center;
@@ -156,6 +162,7 @@ const PositionContainer  = styled.div`
         margin: 0;
     }
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         font-size: 0.75em;
         text-align: center;
@@ -171,6 +178,7 @@ const BottomContainer = styled.div`
     justify-content: center;
     background-color: #2D3A54 ;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         height: 450px;
     }
@@ -188,6 +196,7 @@ const BottomImageContainer = styled.div`
         width: 20em;
         height: auto;
     }
+
     {/*Tablet*/}
     @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
         width: 80%;
@@ -217,6 +226,7 @@ const BottomRightContainer = styled.div`
     align-items: flex-start;
     justify-content: center;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         width: 100%;
     }
@@ -228,6 +238,7 @@ const BottomTitleContainer = styled.div`
     font-size: 2.2em;
     text-align: left;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         font-size: 1.2em;
         margin: 0em 2em;
@@ -253,6 +264,7 @@ const TextContainer = styled.div`
         margin: 1.5em 0em;
     }
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         font-size: 1em;
         width: 80%;
@@ -274,6 +286,7 @@ const ButtonContainer = styled(Link)`
     margin-top: 1.5em;
     text-decoration: none;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         margin: 0em 2.5em;
     }

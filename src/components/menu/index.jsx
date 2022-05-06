@@ -5,12 +5,9 @@ import { MenuToggle } from "./menuToggle";
 import { motion } from "framer-motion";
 import { NavMenu } from "./navMenu";
 
-
 const HamburgerMenuContainer = styled.div`
     display: flex;
-
 `;
-
 
 const MenuContainer = styled(motion.div)`
     min-width: 300px;

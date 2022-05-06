@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Marginer } from "../../components/marginer";
 import LinkedInGrey from "../../assets/LinkedInGrey.png";
@@ -13,6 +12,7 @@ const FooterContainer = styled.div`
     background-color: #272829;
     background-size: cover;
     
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
       height: 330px;
     }
@@ -25,6 +25,7 @@ const Background = styled.div`
     flex-direction: row;
     justify-content: flex-start;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
       flex-direction: column;
     }
@@ -43,6 +44,7 @@ const LeftContainer = styled.div`
   justify-content: start;
   align-items: left;
 
+  {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     margin: 2em 0em;
     width: 100%;
@@ -54,11 +56,13 @@ const LogoContainer = styled.div`
   width: 200px;
   height: 120px;
   margin-bottom: -4em;
+
   img {
       width: 100%;
       height: 100%;
   }
 
+  {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     height: 6em;
     margin: 0em 0em -4em 0.5em;
@@ -73,6 +77,7 @@ const DescriptionContainer = styled.div`
   text-align: left;
   margin: 0em 1em; 
 
+  {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     width: 80%;
     height: 10em;
@@ -100,6 +105,7 @@ const CopywriteContainer = styled.div`
   text-align: left;
   margin: 18em 0em 0em 2em;
 
+  {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     margin: 0em 2em;
   }
@@ -114,6 +120,7 @@ const RightContainer = styled.div`
   justify-content: space-evenly;
   align-items: left;
   
+  {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     margin: 0em;
     flex-direction: column;
@@ -133,10 +140,10 @@ const ListContainer = styled.div`
   width: auto;
   height: auto;
 
+  {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     height: 0em;
   }
-
   {/*Tablet*/}
   @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
     margin: 1em 1.2em;
@@ -151,6 +158,7 @@ const ListTitle = styled.div`
   text-align: left;
   cursor: default;
   
+  {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     font-size: 0.75em;
     margin: 1em 2em;
@@ -166,6 +174,7 @@ const ListItemsContainer = styled.div`
   width: auto;
   height: auto;
 
+  {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     line-height: 1em;
     margin: 0em;
@@ -181,11 +190,13 @@ const ImgContainer = styled.div`
   width: 1.5em;
   height: auto;
   margin-left: 0.2em;
+
   img {
     width: 100%;
     height: 100%;
   }
 
+  {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     width: 3.2em;
 }
@@ -210,6 +221,7 @@ const LinkItem = styled.div`
     color: inherit;
   }
 
+  {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     line-height: 1em;
     margin: 0.5em 0em 0em 2em;
@@ -228,12 +240,12 @@ const PortalTitle = styled.div`
     color: inherit;
   }
   
-
   &: hover {
     color: #8193ad;
     cursor: pointer;
   }
   
+  {/*Mobile*/}
   @media screen and (max-width: ${deviceSize.mobile}px) {
     font-size: 0.75em;
     margin: 1em 2em;
@@ -247,7 +259,7 @@ const PortalTitle = styled.div`
 
 export function Footer(props) {
   const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
-  const isTablet = useMediaQuery({ maxWidth: deviceSize.tablet });
+
     return (
         <FooterContainer>
             <Background>

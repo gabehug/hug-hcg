@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Marginer } from "../../components/marginer";
-import { Parallax } from "react-scroll-parallax";
 import CarouselInfo from "./information";
 import { useMediaQuery } from "react-responsive";
 import { deviceSize } from "../responsive";

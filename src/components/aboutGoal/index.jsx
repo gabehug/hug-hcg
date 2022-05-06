@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Marginer } from "../marginer";
 import goalImg from "../../assets/goalImg.png";
 import { useMediaQuery } from "react-responsive";
 import { deviceSize } from "../responsive";
@@ -11,6 +10,7 @@ const GoalContainer = styled.div`
     background-color: #fff;
     background-size: cover;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         height: 600px;   
     }
@@ -38,6 +38,7 @@ const TopContainer = styled.div`
     justify-content: space-around;
     background-color: #393C3E;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         margin: 0em;
     }
@@ -58,6 +59,7 @@ const TextContainer = styled.div`
         margin: 1em 0em;
     }
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         width: 80%;
         font-size: 1em;
@@ -89,6 +91,7 @@ const ImageContainer = styled.div`
         width: 26em;
         height: 18 em;
     }
+
     {/*Tablet*/}
     @media screen and (min-width: ${deviceSize.mobile}px) and (max-width: ${deviceSize.tablet}px) {
         width: 90em;
@@ -119,6 +122,7 @@ const LeftContainer = styled.div`
     align-items: flex-start;
     margin-left: 8em;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         margin: 2em;
     }
@@ -131,6 +135,7 @@ const TitleContainer = styled.div`
     text-align: left;
     margin: 0em;
 
+    {/*Mobile*/}
     @media screen and (max-width: ${deviceSize.mobile}px) {
         font-size: 1.2em;
         margin: 0em 2em;
