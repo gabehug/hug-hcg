@@ -71,7 +71,7 @@ export function Scheduling(props) {
                     <h1>Book an Appointment </h1>
                 </TitleContainer>
                 <WidgetContainer>
-                    <InlineWidget url="https://calendly.com/gaberhug/meeting?month=2022-02"/>
+                    <InlineWidget url="https://calendly.com/hug-humancapitalgroup/30min?month=2022-05"/>
                 </WidgetContainer>
                 <Marginer direction="vertical" margin={30} />
             </Background>
